@@ -4,7 +4,7 @@ Version: @VERSION@
 Release: 1
 Copyright: LGPL
 Group: Development/Languages
-Source: ftp://ftp.nowhere.org/pub/gtk/python/python-gtkextra-%{version}.tar.gz
+Source: http://cloud.github.com/downloads/vhernandez/pygtksheet/python-gtksheet-%{version}.tar.gz
 BuildRoot: /var/tmp/python-gtksheet-root
 Requires: gtk2 >= 2.10.0
 Requires: python >= 2.4
@@ -12,7 +12,7 @@ Requires: pygtk2 >= 2.8.0
 Requires: gtksheet >= 0.1
 Buildrequires: python-devel >= 2.4
 Buildrequires: pygtk2-devel >= 2.8.0
-Buildrequires: gtk+extra2-devel >= 0.1
+Buildrequires: gtk+sheet-devel >= 0.1
 
 %description
 Python-gtksheet is an extension module for python that gives you access to
