@@ -1,0 +1,59 @@
+;; -*- scheme -*-
+
+; object definitions ...
+(define-object ItemEntry
+  (in-module "Gtk")
+  (parent "GtkEntry")
+  (c-name "GtkItemEntry")
+  (gtype-id "GTK_TYPE_ITEM_ENTRY")
+)
+
+(define-object Sheet
+  (in-module "Gtk")
+  (parent "GtkContainer")
+  (c-name "GtkSheet")
+  (gtype-id "GTK_TYPE_SHEET")
+)
+
+;; Enumerations and flags ...
+
+(define-enum SheetAttrType
+  (in-module "Gtk")
+  (c-name "GtkSheetAttrType")
+  (gtype-id "GTK_TYPE_SHEET_ATTR_TYPE")
+  (values
+    '("foreground" "GTK_SHEET_FOREGROUND")
+    '("background" "GTK_SHEET_BACKGROUND")
+    '("font" "GTK_SHEET_FONT")
+    '("justification" "GTK_SHEET_JUSTIFICATION")
+    '("border" "GTK_SHEET_BORDER")
+    '("border-color" "GTK_SHEET_BORDER_COLOR")
+    '("is-editable" "GTK_SHEET_IS_EDITABLE")
+    '("is-visible" "GTK_SHEET_IS_VISIBLE")
+  )
+)
+
+(define-enum SheetState
+  (in-module "Gtk")
+  (c-name "GtkSheetState")
+  (gtype-id "GTK_TYPE_SHEET_STATE")
+  (values
+    '("normal" "GTK_SHEET_NORMAL")
+    '("row-selected" "GTK_SHEET_ROW_SELECTED")
+    '("column-selected" "GTK_SHEET_COLUMN_SELECTED")
+    '("range-selected" "GTK_SHEET_RANGE_SELECTED")
+  )
+)
+
+(define-flags SheetBorderFlags
+  (in-module "Gtk")
+  (c-name "GtkSheetBorderFlags")
+  (gtype-id "GTK_TYPE_SHEET_BORDER_FLAGS")
+  (values
+    '("left-border" "GTK_SHEET_LEFT_BORDER")
+    '("right-border" "GTK_SHEET_RIGHT_BORDER")
+    '("top-border" "GTK_SHEET_TOP_BORDER")
+    '("bottom-border" "GTK_SHEET_BOTTOM_BORDER")
+  )
+)
+

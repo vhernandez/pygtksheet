@@ -1,0 +1,4 @@
+This package provides a Python interface to the GtkSheet widget set for GTK2.
+Its home on the web is <http://github.com/vhernandez/pygtksheet>.
+
+Victor M. Hernández-Rocamora <victor.hr@gmail.com>.

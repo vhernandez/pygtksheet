@@ -1,0 +1,15 @@
+
+Víctor M. Hernández-Rocamora is the mantainer of the GtkSheet python
+bindings. 
+
+These bindings are based on the python bindings for the 
+GtkExtra library, written by Toby D. Reeves and Andreas Voegele.
+
+From the python-gtkextra2 AUTHORS:
+
+Andreas Voegele wrote the python bindings for GtkExtra-0.99.x
+under PyGtk-1 and Gtk-1.2. He has since left the project.
+
+Toby D. Reeves <treeves@users.sourceforge.net> wrote the python
+bindings for GtkExtra-2 under PyGtk-2 and Gtk-2.x. This is an
+almost complete rewrite with very little of Andreas' C code left.
