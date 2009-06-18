@@ -125,6 +125,21 @@ _wrap_gtk_sheet_new(PyGObject *self, PyObject *args, PyObject *kwargs)
 %%
 new-constructor GTK_TYPE_SHEET
 %%
+override gtk_sheet_get_visible_range
+static PyObject *
+_wrap_gtk_sheet_get_visible_range(PyGObject *self, PyObject *args, PyObject *kwargs)
+{
+    static char *kwlist[] = { "range", NULL };
+    PyObject *py_range;
+    GtkSheetRange range = {0,0,0,0};
+    
+    gtk_sheet_get_visible_range(GTK_SHEET(self->obj), &range);
+
+    py_range = pyg_boxed_new(GTK_TYPE_SHEET_RANGE, &range, TRUE, TRUE);
+    
+    return py_range;
+}
+%%
 override gtk_sheet_get_active_cell
 static PyObject *
 _wrap_gtk_sheet_get_active_cell (PyGObject *self, PyObject *args, PyObject *kwargs)
