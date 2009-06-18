@@ -1,14 +1,23 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
-
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+<!ENTITY nbsp "&#x00A0;">
+]>
 <refentry id="class-gtksheet">
+  <refmeta>
+    <refentrytitle>gtksheet.Sheet</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>PyGtkSheet Docs</refmiscinfo>
+  </refmeta>
+
   <refnamediv>
     <refname>gtksheet.Sheet</refname>
     <refpurpose>A spreadsheet-like matrix widget for GTK applications</refpurpose>
   </refnamediv>
 
 <!-- ***************************** -->
-<!-- BEGIN OF GTKMOZEMBED SYNOPSIS -->
+<!-- BEGIN OF GTKSHEET SYNOPSIS -->
 <!-- ***************************** -->
 
 <refsect1>
@@ -74,15 +83,438 @@
 
   <methodsynopsis language="python">
 	  <methodname><link linkend="method-gtksheet--set-selection-mode">set_selection_mode</link></methodname>
-	  <methodparam><parameter role="keyword">set_selection_mode</parameter></methodparam>
+	  <methodparam><parameter role="keyword">mode</parameter></methodparam>
   </methodsynopsis>
 
   <methodsynopsis language="python">
 	  <methodname><link linkend="method-gtksheet--set-autoresize">set_autoresize</link></methodname>
-	  <methodparam><parameter role="keyword">set_autoresize</parameter></methodparam>
+	  <methodparam><parameter role="keyword">autoresize</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--autoresize">autoresize</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-autoscroll">set_autoscroll</link></methodname>
+	  <methodparam><parameter role="keyword">autoscroll</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--autoscroll">autoscroll</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-clip-text">set_clip_text</link></methodname>
+	  <methodparam><parameter role="keyword">clip_text</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--clip-text">clip_text</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-justify-entry">set_justify_entry</link></methodname>
+	  <methodparam><parameter role="keyword">justify</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--justify-entry">justify_entry</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-locked">set_locked</link></methodname>
+	  <methodparam><parameter role="keyword">locked</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--locked">locked</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-title">set_title</link></methodname>
+	  <methodparam><parameter role="keyword">title</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--freeze">freeze</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--thaw">thaw</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-background">set_background</link></methodname>
+	  <methodparam><parameter role="keyword">color</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-grid">set_grid</link></methodname>
+	  <methodparam><parameter role="keyword">color</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--show-grid">show_grid</link></methodname>
+	  <methodparam><parameter role="keyword">show</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--grid-visible">grid_visible</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-column-title">set_column_title</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">title</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-column-title">get_column_title</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-row-title">set_row_title</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">title</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-row-title">get_row_title</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+  </methodsynopsis>
+
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-button-add-label">row_button_add_label</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">label</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-button-add-label">column_button_add_label</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">label</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-button-get-label">row_button_get_label</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-button-get-label">column_button_get_label</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-button-justify">row_button_justify</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">justification</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-button-justify">column_button_justify</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">justification</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--moveto">moveto</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">row_align</parameter></methodparam>
+	  <methodparam><parameter role="keyword">col_align</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-row-titles-width">set_row_titles_width</link></methodname>
+	  <methodparam><parameter role="keyword">width</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-column-titles-height">set_column_titles_height</link></methodname>
+	  <methodparam><parameter role="keyword">height</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--show-row-titles">show_row_titles</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--show-column-titles">show_column_titles</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--hide-row-titles">hide_row_titles</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--hide-column-titles">hide_column_titles</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-titles-visible">row_titles_visible</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-titles-visible">column_titles_visible</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-set-sensitivity">row_set_sensitivity</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">sensitive</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--rows-set-sensitivity">rows_set_sensitivity</link></methodname>
+	  <methodparam><parameter role="keyword">sensitive</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-set-sensitivity">column_set_sensitivity</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">sensitive</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--columns-set-sensitivity">columns_set_sensitivity</link></methodname>
+	  <methodparam><parameter role="keyword">sensitive</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--rows-set-resizable">rows_set_resizable</link></methodname>
+	  <methodparam><parameter role="keyword">resizable</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--columns-set-resizable">columns_set_resizable</link></methodname>
+	  <methodparam><parameter role="keyword">resizable</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--rows-resizable">rows_resizable</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--columns-resizable">columns_resizable</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-set-visibility">row_set_visibility</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--row-label-set-visibility">row_label_set_visibility</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--rows-label-set-visibility">rows_label_set_visibility</link></methodname>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-set-visibility">column_set_visibility</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--column-label-set-visibility">column_label_set_visibility</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--columns-label-set-visibility">columns_label_set_visibility</link></methodname>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--select-row">select_row</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--select-column">select_column</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--clip-range">clip_range</link></methodname>
+	  <methodparam><parameter role="keyword">range</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--unclip-range">unclip_range</link></methodname>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--in-clip">in_clip</link></methodname>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-hadjustment">get_hadjustment</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-vadjustment">get_vadjustment</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--select-range">select_range</link></methodname>
+	  <methodparam><parameter role="keyword">range</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--unselect-range">unselect_range</link></methodname>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-active-cell">set_active_cell</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-active-cell">get_active_cell</link></methodname>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-cell">set_cell</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">justification</parameter></methodparam>
+	  <methodparam><parameter role="keyword">text</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-cell-text">set_cell_text</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">text</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--cell-get-text">cell_get_text</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--cell-clear">cell_clear</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--cell-delete">cell_delete</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--range-clear">range_clear</link></methodname>
+	  <methodparam><parameter role="keyword">range</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--range-delete">range_delete</link></methodname>
+	  <methodparam><parameter role="keyword">range</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--cell-get-state">cell_get_state</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-pixel-info">get_pixel_info</link></methodname>
+	  <methodparam><parameter role="keyword">x</parameter></methodparam>
+	  <methodparam><parameter role="keyword">y</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-cell-area">get_pixel_info</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-column-width">set_column_width</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+	  <methodparam><parameter role="keyword">width</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-row-height">set_row_height</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">height</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--add-column">add_column</link></methodname>
+	  <methodparam><parameter role="keyword">ncols</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--add-row">add_row</link></methodname>
+	  <methodparam><parameter role="keyword">nrows</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--insert-columns">insert_columns</link></methodname>
+	  <methodparam><parameter role="keyword">col</parameter></methodparam>
+	  <methodparam><parameter role="keyword">ncols</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--insert-rows">insert_rows</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">nrows</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--delete-columns">delete_columns</link></methodname>
+	  <methodparam><parameter role="keyword">col</parameter></methodparam>
+	  <methodparam><parameter role="keyword">ncols</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--delete-rows">delete_rows</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
+	  <methodparam><parameter role="keyword">nrows</parameter></methodparam>
   </methodsynopsis>
 
 </classsynopsis>
+
+
 
 <programlisting>
 <emphasis role="bold">Functions</emphasis>
@@ -97,9 +529,9 @@
 </programlisting>
 </refsect1>
 
-<!-- ***************************** -->
+<!-- ************************** -->
 <!-- BEGIN OF GTKSHEET ANCESTRY -->
-<!-- ***************************** -->
+<!-- ************************** -->
 
 <refsect1>
     <title>Ancestry</title>
@@ -112,9 +544,144 @@
 </synopsis>
 </refsect1>
 
-<!-- ************************************** -->
+<!-- **************************** -->
+<!-- BEGIN OF GTKSHEET PROPERTIES -->
+<!-- **************************** -->
+
+<refsect1 id="properties-gtksheet">
+    <title>gtksheet.Sheet Properties</title>
+
+    <para><link linkend="properties-gtkobject">gtk.Object Properties</link></para>
+    <para><link linkend="properties-gtkwidget">gtk.Widget Properties</link></para>
+    <para><link linkend="properties-gtkcontainer">gtk.Container Properties</link></para>
+
+    <blockquote role="properties">
+      <informaltable pgwide="1" frame="none">
+	<tgroup cols="3">
+	  <colspec column="1" colwidth="1in"/>
+	  <colspec column="2" colwidth="1in"/>
+	  <colspec column="3" colwidth="4in"/>
+	  <tbody>
+
+	    <row valign="top">
+	      <entry>"active-cell"</entry>
+	      <entry>Read</entry>
+	      <entry>A tuple (row, column) indicating the active cell (the cell 
+          being edited)</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"autoresize"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the cells will be resized 
+          automatically when text is being introduced by the user</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"autoscroll"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the sheet will be automatically 
+          scrolled the last row/column in the sheet is reached</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"clip-text"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the cell text will be clipped</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"column-titles-visible"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the column titles will be visible</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"columns-resizable"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, columns can be resized by the user</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"gird-visible"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the grid lines will be visible</entry>
+	    </row>
+        
+        <row valign="top">
+	      <entry>"locked"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the user modification of the 
+          contents of each cell is prevented</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"n-columns"</entry>
+	      <entry>Read</entry>
+	      <entry>The number of columns in the sheet.</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"n-rows"</entry>
+	      <entry>Read</entry>
+	      <entry>The number of rows in the sheet.</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"row-titles-visible"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the row titles will be visible</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"rows-resizable"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, rows can be resized by the user</entry>
+	    </row>>
+
+	    <row valign="top">
+	      <entry>"selected-range"</entry>
+	      <entry>Read</entry>
+	      <entry>A <classname>SheetRange</classname> indicating the cells in the
+          sheet that are currently selected</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"selection-mode"</entry>
+	      <entry>Read-Write</entry>
+
+	      <entry>The selection mode of the sheet. It can have two values: 
+          <literal>gtk.SELECTION_SINGLE</literal>, indicating that no cell can be
+          selected, or <literal>gtk.SELECTION_BROWSE</literal>, indicating that
+          multiple cells can be selected.
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"state"</entry>
+	      <entry>Read</entry>
+	      <entry>The selection state of the sheet. Its possible values are, see the 
+          <link linkend="method-gtksheet--get-state"><methodname>get_state</methodname></link>()
+          method for its possible values.
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"title"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The title of the sheet.</entry>
+	    </row>
+
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </blockquote>
+
+  </refsect1>
+
+<!-- *********************************** -->
 <!-- BEGIN OF GTKSHEET SIGNAL PROTOTYPES -->
-<!-- ************************************** -->
+<!-- *********************************** -->
 
 <refsect1>
     <title>Signal Prototypes</title>
@@ -146,9 +713,9 @@
    </variablelist>
 </refsect1>
 
-<!-- ******************************** -->
+<!-- ***************************** -->
 <!-- BEGIN OF GTKSHEET DESCRIPTION -->
-<!-- ******************************** -->
+<!-- ***************************** -->
 
 <refsect1 id="description-gtksheet">
   <title>Description</title>
@@ -182,9 +749,9 @@ if __name__ == '__main__':
 
 </refsect1>
 
-<!-- ******************************** -->
-<!-- BEGIN OF GTKMOZEMBED CONSTRUCTOR -->
-<!-- ******************************** -->
+<!-- ***************************** -->
+<!-- BEGIN OF GTKSHEET CONSTRUCTOR -->
+<!-- ***************************** -->
 
 <refsect1 id="constructor-gtksheet">
   <title>Constructor</title>
@@ -237,9 +804,9 @@ if __name__ == '__main__':
 
 </refsect1>
 
-<!-- **************************** -->
+<!-- ************************* -->
 <!-- BEGIN OF GTKSHEET METHODS -->
-<!-- **************************** -->
+<!-- ************************* -->
 
 <refsect1>
   <title>Methods</title>
@@ -479,7 +1046,7 @@ if __name__ == '__main__':
       
     <variablelist>
 	    <varlistentry>
-  	      <term><parameter role="keyword">mode</parameter>&nbsp;:</term>
+  	      <term><parameter role="keyword">autoresize</parameter>&nbsp;:</term>
     	  <listitem><simpara><literal>True</literal> or <literal>False</literal>
           </simpara></listitem>
 	    </varlistentry>
@@ -489,6 +1056,675 @@ if __name__ == '__main__':
       Sets whether the cells will be autoresized when text is typed.
 	</para>
   </refsect2>
+
+  <refsect2 id="method-gtksheet--autoresize">
+    <title>gtksheet.Sheet.autoresize</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>autoresize</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Gets the autoresize mode of the sheet.
+	</para>
+  </refsect2>
+
+
+  <refsect2 id="method-gtksheet--set-autoscroll">
+    <title>gtksheet.Sheet.set_autoscroll</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_autoscroll</methodname>
+  	    <methodparam><parameter role="keyword">autoscroll</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">autoscroll</parameter>&nbsp;:</term>
+    	  <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Sets whether the table will be automatically scrolled when the last 
+      row or column in the sheet is reached.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--autoscroll">
+    <title>gtksheet.Sheet.autoscroll</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>autoscroll</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Gets the autoscroll mode of the sheet.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-clip-text">
+    <title>gtksheet.Sheet.set_clip_text</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_clip_text</methodname>
+  	    <methodparam><parameter role="keyword">clip_text</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">clip_text</parameter>&nbsp;:</term>
+    	  <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Sets whether the text in the cell will be clipped.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--clip-text">
+    <title>gtksheet.Sheet.clip_text</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>clip_text</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Gets the clip text mode of the sheet.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-justify-entry">
+    <title>gtksheet.Sheet.set_justify_entry</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_justify_entry</methodname>
+  	    <methodparam><parameter role="keyword">justify</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">justify</parameter>&nbsp;:</term>
+    	  <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Sets whether the text in the cell will be justified.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--justify-entry">
+    <title>gtksheet.Sheet.justify_entry</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>justify_entry</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Gets the justification status in the sheet.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-locked">
+    <title>gtksheet.Sheet.set_locked</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_locked</methodname>
+  	    <methodparam><parameter role="keyword">locked</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">locked</parameter>&nbsp;:</term>
+    	  <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>locked</methodname>() method set the "locked" property 
+    to the value of <parameter>locked</parameter>. If <parameter>locked</parameter>
+    is <literal>True</literal>, the sheet will be locked, preventing user 
+    modification of the cells.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--locked">
+    <title>gtksheet.Sheet.locked</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>locked</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara>the current value of the "locked" property
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>locked</methodname>() method returns the current value of 
+    the "locked" property.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-title">
+    <title>gtksheet.Sheet.set_title</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_title</methodname>
+  	    <methodparam><parameter role="keyword">title</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">title</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a string to be set as the sheet title
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>set_title</methodname>() method sets the text to be used as
+    the sheet's title.  
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--freeze">
+    <title>gtksheet.Sheet.freeze</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>freeze</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+
+    <para>
+    The <methodname>freeze</methodname>() method freezes all visual updates of 
+    the sheet. Changes in cells' contents will occur in a more efficient way 
+    than on a unfrozen sheet.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--thaw">
+    <title>gtksheet.Sheet.thaw</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>thaw</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+
+    <para>
+    The <methodname>thaw</methodname>() method reverts the sheet to an unfrozen
+    mode, with all visual updates taking place normally.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-background">
+    <title>gtksheet.Sheet.set_background</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_background</methodname>
+  	    <methodparam><parameter role="keyword">color</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">color</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the <link linkend="class-gdkcolor">
+          <classname>gtk.gdk.Color</classname></link> to be used as default background color
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>set_background</methodname>() method sets the default 
+    background color used to render the cells.  
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-grid">
+    <title>gtksheet.Sheet.set_grid</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_grid</methodname>
+  	    <methodparam><parameter role="keyword">color</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">color</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the <link linkend="class-gdkcolor">
+          <classname>gtk.gdk.Color</classname></link> to draw sheet grid lines
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>set_grid</methodname>() method sets the color of the grid
+    lines of the sheet.   
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--show-grid">
+    <title>gtksheet.Sheet.show_grid</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>show_grid</methodname>
+  	    <methodparam><parameter role="keyword">show</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">show</parameter>&nbsp;:</term>
+    	  <listitem><simpara>if <literal>True</literal>, the grid lines will be shown
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>show_grid</methodname>() method method sets the "grid-visible" property
+    to the value indicated by <parameter>show</parameter>. If <parameter>show
+    </parameter> is <literal>True</literal> the grid lines of the sheet are visible.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--grid-visible">
+    <title>gtksheet.Sheet.grid_visible</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>grid_visible</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara>the current value of the "grid-visible" property
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>grid_visible</methodname>() method returns the current value
+    of the "grid-visible" property.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-column-title">
+    <title>gtksheet.Sheet.set_column_title</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_column_title</methodname>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">title</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column whose title will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">title</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a string to be used as the title of the column
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>set_column_title</methodname>() method sets the title of the
+    column indicated by <parameter>column</parameter> to the value of 
+    <parameter>title</parameter>.   
+    </para>
+    <para>
+    Note that the title of a column is not displayed, it is an internal string.
+    To set the label that will be displayed, use the 
+    <link linkend="method-gtksheet--column-button-add-label">
+    <classname>column_button_add_label</classname></link>() method.
+    </para>
+
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-column-title">
+    <title>gtksheet.Sheet.get_column_title</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_column</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column whose title will be retuned
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara>the current title of column indicated by <parameter>column</parameter>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>get_column_title</methodname>() method returns the current 
+    title of the column indicated by <parameter>column</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-row-title">
+    <title>gtksheet.Sheet.set_row_title</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_row_title</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">title</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row whose title will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">title</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a string to be used as the title of the row
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>set_row_title</methodname>() method sets the title of the
+    row indicated by <parameter>row</parameter> to the value of 
+    <parameter>title</parameter>.
+    </para>
+    <para>
+    Note that the title of a row is not displayed, it is an internal string.
+    To set the label that will be displayed, use the 
+    <link linkend="method-gtksheet--row-button-add-label">
+    <classname>row_button_add_label</classname></link>() method.
+    </para>
+
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-row-title">
+    <title>gtksheet.Sheet.get_row_title</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_row</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row whose title will be retuned
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+          <listitem><simpara>the current title of row indicated by <parameter>row</parameter>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>get_row_title</methodname>() method returns the current 
+    title of the row indicated by <parameter>row</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--row-button-add-label">
+    <title>gtksheet.Sheet.row_button_add_label</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>row_button_add_label</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">label</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row whose button label will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">label</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a string to be used as the label of the row button
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>row_button_add_label</methodname>() method sets the label 
+    displayed by the button of the row indicated by <parameter>row</parameter>. 
+    </para>
+    <para>
+    If no label is added to a row button, the row number will be displayed.
+    </para>
+  </refsect2>  
+
+  <refsect2 id="method-gtksheet--column-button-add-label">
+    <title>gtksheet.Sheet.column_button_add_label</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>column_button_add_label</methodname>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">label</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column whose button label will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">label</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a string to be used as the label of the column button
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>column_button_add_label</methodname>() method sets the label 
+    displayed by the button of the column indicated by <parameter>column</parameter>. 
+    </para>
+    <para>
+    If no label is added to a column button, the row number will be displayed.
+    </para>
+  </refsect2> 
+
+  <refsect2 id="method-gtksheet--row-button-get-label">
+    <title>gtksheet.Sheet.row_button_get_label</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>row_button_get_label</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row whose button label will be returned
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>the label of the row button or 
+          <literal>None</literal> if no label was set for this row
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>row_button_get_label</methodname>() method returns the label 
+    added to the button of the row indicated by <parameter>row</parameter>. 
+    If no label was added to a row button, <literal>None</literal> is returned.
+    </para>
+  </refsect2>  
+
+  <refsect2 id="method-gtksheet--column-button-get-label">
+    <title>gtksheet.Sheet.column_button_add_label</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>column_button_get_label</methodname>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column whose button label will be returned
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>the label of the column button or 
+          <literal>None</literal> if no label was set for this column
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>column_button_add_label</methodname>() method  returns the label 
+    added to the button of the column indicated by <parameter>column</parameter>. 
+    If no label was added to a column button, <literal>None</literal> is returned.
+    </para>
+  </refsect2> 
+
+  <refsect2 id="method-gtksheet--row-button-justify">
+    <title>gtksheet.Sheet.row_button_justify</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>row_button_justify</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">justification</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">justification</parameter>&nbsp;:</term>
+    	  <listitem><simpara>justification type
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>row_button_justify</methodname>() method sets the justification 
+    type used for the label of the button of the row indicated by
+    <parameter>row</parameter>. Possible values for <parameter>justification</parameter>
+    are <literal>gtk.JUSTIFY_LEFT</literal>, <literal>gtk.JUSTIFY_RIGHT</literal> and  
+    <literal>gtk.JUSTIFY_CENTER</literal>.
+    </para>
+  </refsect2> 
+
+  <refsect2 id="method-gtksheet--column-button-justify">
+    <title>gtksheet.Sheet.column_button_justify</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>column_button_justify</methodname>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">justification</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">justification</parameter>&nbsp;:</term>
+    	  <listitem><simpara>justification type
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>column_button_justify</methodname>() method sets the justification 
+    type used for the label of the button of the column indicated by
+    <parameter>column</parameter>. Possible values for <parameter>justification</parameter>
+    are <literal>gtk.JUSTIFY_LEFT</literal>, <literal>gtk.JUSTIFY_RIGHT</literal> and  
+    <literal>gtk.JUSTIFY_CENTER</literal>.
+    </para>
+  </refsect2> 
+
+  <refsect2 id="method-gtksheet--moveto">
+    <title>gtksheet.Sheet.moveto</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>moveto</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">row_align</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">column_align</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row_align</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a value between 0.0 and 1.0
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column_align</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a value between 0.0 and 1.0
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>moveto</methodname>() method scrolls the viewing area of the
+    sheet to the given <parameter>column</parameter> and <parameter>row</parameter>.
+    </para>
+    <para>
+    <parameter>row_align</parameter> and <parameter>col_align</parameter> are 
+    values between 0.0-1.0 that represent the location where the row should 
+    appear on the screnn, 0.0 being top or left, 1.0 being bottom or right.
+    </para>
+  </refsect2> 
 
 </refsect1>
 <!-- ****************************** -->

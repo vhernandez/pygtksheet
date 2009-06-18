@@ -29,7 +29,7 @@
   <chapter id="gtksheet-class-reference" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>The PyGtkSheet Class Reference</title>
 
-    <!-- GTKMOZEMBED OBJECTS -->
+    <!-- GTKSHEET OBJECTS -->
 
     <xi:include href="gtksheet-gtksheet.xml"/>
 

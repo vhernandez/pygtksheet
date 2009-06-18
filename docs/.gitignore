@@ -2,3 +2,5 @@ Makefile
 Makefile.in
 html
 html.stamp
+builddate.xml
+build_stamp
