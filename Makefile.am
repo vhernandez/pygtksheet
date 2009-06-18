@@ -1,7 +1,7 @@
 # require automake-1.5
 AUTOMAKE_OPTIONS = 1.5
 
-SUBDIRS = gtksheet
+SUBDIRS = gtksheet docs
 
 CLEANFILES =
 EXTRA_DIST = 

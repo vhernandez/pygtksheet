@@ -1,0 +1,634 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+
+<refentry id="class-gtksheet">
+  <refnamediv>
+    <refname>gtksheet.Sheet</refname>
+    <refpurpose>A spreadsheet-like matrix widget for GTK applications</refpurpose>
+  </refnamediv>
+
+<!-- ***************************** -->
+<!-- BEGIN OF GTKMOZEMBED SYNOPSIS -->
+<!-- ***************************** -->
+
+<refsect1>
+  <title>Synopsis</title>
+
+  <classsynopsis language="python">
+  <ooclass><classname>gtksheet.Sheet</classname></ooclass>
+  <ooclass><classname><link linkend="class-gtkcontainer">gtk.Container</link></classname></ooclass>
+    
+  <constructorsynopsis language="python">
+	  <methodname><link linkend="constructor-gtksheet">gtksheet.Sheet</link></methodname>
+	  <methodparam><parameter role="keyword">rows</parameter><initializer>10</initializer></methodparam>
+	  <methodparam><parameter role="keyword">columns</parameter><initializer>10</initializer></methodparam>
+	  <methodparam><parameter role="keyword">title</parameter><initializer>""</initializer></methodparam>
+	  <methodparam><parameter role="keyword">browser</parameter><initializer>False</initializer></methodparam>
+	  <methodparam><parameter role="keyword">entry_type</parameter><initializer>gtk.Entry</initializer></methodparam>
+  </constructorsynopsis>
+    
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-hadjustment">set_hadjustment</link></methodname>
+	  <methodparam><parameter role="keyword">adjustment</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-vadjustment">set_vadjustment</link></methodname>
+	  <methodparam><parameter role="keyword">adjustment</parameter></methodparam>
+  </methodsynopsis>
+    
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--change-entry">change_entry</link></methodname>
+	  <methodparam><parameter role="keyword">entry_type</parameter></methodparam>
+  </methodsynopsis>
+    
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-entry">get_entry</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-entry-widget">get_entry_widget</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+    
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-state">get_state</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+    
+  <methodsynopsis language="python">
+    <methodname><link linkend="method-gtksheet--get-columns-count">get_columns_count</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+    
+  <methodsynopsis language="python">
+    <methodname><link linkend="method-gtksheet--get-rows-count">get_rows_count</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+    <methodname><link linkend="method-gtksheet--get-visible-range">get_visible_range</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-selection-mode">set_selection_mode</link></methodname>
+	  <methodparam><parameter role="keyword">set_selection_mode</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--set-autoresize">set_autoresize</link></methodname>
+	  <methodparam><parameter role="keyword">set_autoresize</parameter></methodparam>
+  </methodsynopsis>
+
+</classsynopsis>
+
+<programlisting>
+<emphasis role="bold">Functions</emphasis>
+
+<methodsynopsis language="python">
+<methodname><link linkend="function-gtksheet--gtksheet-check-version">gtksheet.gtksheet_check_version</link></methodname>
+<methodparam><parameter role="keyword">required_major</parameter></methodparam>
+<methodparam><parameter role="keyword">required_minor</parameter></methodparam>
+<methodparam><parameter role="keyword">required_micro</parameter></methodparam>
+</methodsynopsis>
+
+</programlisting>
+</refsect1>
+
+<!-- ***************************** -->
+<!-- BEGIN OF GTKSHEET ANCESTRY -->
+<!-- ***************************** -->
+
+<refsect1>
+    <title>Ancestry</title>
+
+<synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
+  +-- <link linkend="class-gtkobject">gtk.Object</link>
+    +-- <link linkend="class-gtkwidget">gtk.Widget</link>
+      +-- <link linkend="class-gtkcontainer">gtk.Container</link>
+        +-- <link linkend="class-gtksheet">gtksheet.Sheet</link>
+</synopsis>
+</refsect1>
+
+<!-- ************************************** -->
+<!-- BEGIN OF GTKSHEET SIGNAL PROTOTYPES -->
+<!-- ************************************** -->
+
+<refsect1>
+    <title>Signal Prototypes</title>
+    <variablelist>
+      <varlistentry>
+        <term>"<link linkend="signal-gtksheet--activate">activate</link>"</term>
+        <listitem>
+          <methodsynopsis language="python"><methodname>callback</methodname>
+            <methodparam><parameter>sheet</parameter></methodparam>
+            <methodparam><parameter>row</parameter></methodparam>
+            <methodparam><parameter>column</parameter></methodparam>
+            <methodparam><parameter>data</parameter></methodparam>
+            <methodparam><parameter>...</parameter></methodparam>
+          </methodsynopsis>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>"<link linkend="signal-gtksheet--changed">changed</link>"</term>
+        <listitem>
+          <methodsynopsis language="python"><methodname>callback</methodname>
+            <methodparam><parameter>sheet</parameter></methodparam>
+            <methodparam><parameter>row</parameter></methodparam>
+            <methodparam><parameter>column</parameter></methodparam>
+            <methodparam><parameter>data</parameter></methodparam>
+            <methodparam><parameter>...</parameter></methodparam>
+          </methodsynopsis>
+        </listitem>
+      </varlistentry>            
+   </variablelist>
+</refsect1>
+
+<!-- ******************************** -->
+<!-- BEGIN OF GTKSHEET DESCRIPTION -->
+<!-- ******************************** -->
+
+<refsect1 id="description-gtksheet">
+  <title>Description</title>
+
+  <para>
+    GtkSheet is matrix widget which can be used to build spreadsheet-like interfaces.
+  </para>
+
+  <para>Here's a small example:</para>
+  <programlisting language="python">
+import gtk
+import gtksheet
+
+class MainWin(gtk.Window):
+    def __init__(self):
+        gtk.Window.__init__(self)
+
+        self.sheet = gtksheet.Sheet(columns=20, rows=20, title="GtkSheet Demo")
+
+        scrwin = gtk.ScrolledWindow()
+        scrwin.add(self.sheet)
+                
+        self.add(scrwin)
+        self.show_all()
+        self.set_size_request(400,400)
+        
+if __name__ == '__main__':
+  MainWin()
+  gtk.main()
+  </programlisting>
+
+</refsect1>
+
+<!-- ******************************** -->
+<!-- BEGIN OF GTKMOZEMBED CONSTRUCTOR -->
+<!-- ******************************** -->
+
+<refsect1 id="constructor-gtksheet">
+  <title>Constructor</title>
+
+  <programlisting><constructorsynopsis language="python">
+	  <methodname>gtksheet.Sheet</methodname>
+	  <methodparam><parameter role="keyword">rows</parameter><initializer>10</initializer></methodparam>
+	  <methodparam><parameter role="keyword">columns</parameter><initializer>10</initializer></methodparam>
+	  <methodparam><parameter role="keyword">title</parameter><initializer>""</initializer></methodparam>
+	  <methodparam><parameter role="keyword">browser</parameter><initializer>False</initializer></methodparam>
+	  <methodparam><parameter role="keyword">entry_type</parameter><initializer>gtksheet.ItemEntry</initializer></methodparam>
+  </constructorsynopsis></programlisting>
+    
+  <variablelist>
+    <varlistentry>
+    	<term><parameter role="keyword">rows</parameter>&nbsp;:</term>
+    	<listitem><simpara>initial number of rows</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">columns</parameter>&nbsp;:</term>
+    	<listitem><simpara>initial number of columns</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">title</parameter>&nbsp;:</term>
+    	<listitem><simpara>sheet title</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">browser</parameter>&nbsp;:</term>
+    	<listitem><simpara>if <literal>True</literal>, a browser sheet is created. 
+        In a browser sheet, cells cannot be edited(read-only).</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">entry_type</parameter>&nbsp;:</term>
+    	<listitem><simpara>A GTK type derived from gtk.Entry to use as the widget
+        for editing cells. For example, you can use a gtk.SpinButton instead of
+        the default gtksheet.ItemEntry. Note that if the browser parameter is 
+        <literal>True</literal>, the entry_type argument is ignored.
+    </simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+	    <term><emphasis>Returns</emphasis>&nbsp;:</term>
+	    <listitem><simpara>a new <link linkend="class-gtksheet"><classname>gtksheet.Sheet</classname></link> object.
+        </simpara></listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>
+    Creates a new <link linkend="class-gtksheet"><classname>gtksheet.Sheet</classname></link> object.
+  </para>
+
+</refsect1>
+
+<!-- **************************** -->
+<!-- BEGIN OF GTKSHEET METHODS -->
+<!-- **************************** -->
+
+<refsect1>
+  <title>Methods</title>
+
+  <refsect2 id="method-gtksheet--set-hadjustment">
+    <title>gtksheet.Sheet.set_hadjustment</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_hadjustment</methodname>
+  	    <methodparam><parameter role="keyword">adjustment</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	    <term><parameter role="keyword">adjustment</parameter>&nbsp;:</term>
+    	  <listitem><simpara>A gtk.Adjustment object</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The <methodname>set_hadjustment</methodname>() method can be used to change
+      the gtk.Adjustment object used for horizontal scrolling.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-vadjustment">
+    <title>gtksheet.Sheet.set_vadjustment</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_vadjustment</methodname>
+  	    <methodparam><parameter role="keyword">adjustment</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	    <term><parameter role="keyword">adjustment</parameter>&nbsp;:</term>
+    	  <listitem><simpara>A gtk.Adjustment object</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The <methodname>set_vadjustment</methodname>() method can be used to change
+      the gtk.Adjustment object used for vertical scrolling.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--change-entry">
+    <title>gtksheet.Sheet.change_entry</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>change_entry</methodname>
+	    <methodparam><parameter role="keyword">entry_type</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+      <variablelist>
+	    <varlistentry>
+  	    <term><parameter role="keyword">entry_type</parameter>&nbsp;:</term>
+    	  <listitem><simpara>A GTK type derived from gtk.Entry (gtk.SpinButton, gtk.Entry...)</simpara></listitem>
+	    </varlistentry>
+      </variablelist>
+
+  <para>
+    The <methodname>change_entry</methodname>() method can be used to change the
+    widget type used to edit the cells content. It must be a type derived from
+    gtk.Entry such as gtk.ItemEntry (the default), gtk.Entry itself or gtk.SpinButton.
+  </para>
+  </refsect2>
+   
+  <refsect2 id="method-gtksheet--get-entry">
+    <title>gtksheet.Sheet.get_entry</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_entry</methodname>
+	    <methodparam></methodparam>
+	</methodsynopsis></programlisting>
+      
+    <variablelist>
+      <varlistentry>
+        <term><emphasis>Returns</emphasis>&nbsp;:</term>
+        <listitem><simpara> A <link linkend="class-gtkwidget"><classname>gtk.Widget</classname></link>
+        </simpara></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>
+    Returns the current sheet's entry widget, the widget used to edit sheet cells.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-entry-widget">
+    <title>gtksheet.Sheet.get_entry_widget</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_entry_widget</methodname>
+	    <methodparam></methodparam>
+	</methodsynopsis></programlisting>
+      
+    <variablelist>
+      <varlistentry>
+        <term><emphasis>Returns</emphasis>&nbsp;:</term>
+        <listitem><simpara> A <link linkend="class-gtkwidget"><classname>gtk.Widget</classname></link>
+        </simpara></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>
+    Returns the current sheet's entry widget, the widget used to edit sheet cells.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-state">
+    <title>gtksheet.Sheet.get_state</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_state</methodname>
+	    <methodparam></methodparam>
+	</methodsynopsis></programlisting>
+      
+    <variablelist>
+      <varlistentry>
+        <term><emphasis>Returns</emphasis>&nbsp;:</term>
+        <listitem><simpara>the state of the sheet
+        </simpara></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>
+    Returns the state of the sheet, which can be: 
+    </para>
+
+    <variablelist>
+	  <varlistentry>
+	    <term><literal>gtksheet.STATE_NORMAL</literal></term>
+	    <listitem>
+	      <simpara>Nothing selected</simpara>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	   <term><literal>gtksheet.STATE_ROW_SELECTED</literal></term>
+	    <listitem>
+	      <simpara>A single row is selected</simpara>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry>
+	    <term><literal>gtksheet.STATE_COLUMN_SELECTED</literal></term>
+	    <listitem>
+	      <simpara>A single column is selected</simpara>
+	    </listitem>
+	   </varlistentry>
+	  <varlistentry>
+	    <term><literal>gtksheet.STATE_RANGE_SELECTED</literal></term>
+	    <listitem>
+	      <simpara>A range of cells is selected</simpara>
+	    </listitem>
+	  </varlistentry>
+    </variablelist>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-columns-count">
+    <title>gtksheet.Sheet.get_columns_count</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_columns_count</methodname>
+	    <methodparam></methodparam>
+	</methodsynopsis></programlisting>
+      
+    <variablelist>
+      <varlistentry>
+        <term><emphasis>Returns</emphasis>&nbsp;:</term>
+        <listitem><simpara>the number of columns
+        </simpara></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Get the number of the columns of the sheet.</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-rows-count">
+    <title>gtksheet.Sheet.get_rows_count</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_rows_count</methodname>
+	    <methodparam></methodparam>
+	</methodsynopsis></programlisting>
+      
+    <variablelist>
+      <varlistentry>
+        <term><emphasis>Returns</emphasis>&nbsp;:</term>
+        <listitem><simpara>the number of rows
+        </simpara></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Get the number of the rows of the sheet.</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-visible-range">
+    <title>gtksheet.Sheet.get_visible_range</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_visible_range</methodname>
+	    <methodparam></methodparam>
+	</methodsynopsis></programlisting>
+      
+    <variablelist>
+      <varlistentry>
+        <term><emphasis>Returns</emphasis>&nbsp;:</term>
+        <listitem><simpara>A <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+        </simpara></listitem>
+      </varlistentry>
+    </variablelist>
+
+    <para>Returns the range of cells that are currently visible (i.e. displayed)
+    to the user.</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-selection-mode">
+    <title>gtksheet.Sheet.set_selection_mode</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_selection_mode</methodname>
+  	    <methodparam><parameter role="keyword">mode</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	    <term><parameter role="keyword">mode</parameter>&nbsp;:</term>
+    	  <listitem><simpara><literal>gtk.SELECTION_SINGLE</literal> or 
+          <literal>gtk.SELECTION_BROWSE</literal></simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Sets the selection mode of the cell. The selection mode can be either
+      <literal>gtk.SELECTION_SINGLE</literal>, indicating that no cell can be
+      selected, or <literal>gtk.SELECTION_BROWSE</literal>, indicating that
+      multiple cells can be selected.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-autoresize">
+    <title>gtksheet.Sheet.set_autoresize</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_autoresize</methodname>
+  	    <methodparam><parameter role="keyword">autoresize</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">mode</parameter>&nbsp;:</term>
+    	  <listitem><simpara><literal>True</literal> or <literal>False</literal>
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      Sets whether the cells will be autoresized when text is typed.
+	</para>
+  </refsect2>
+
+</refsect1>
+<!-- ****************************** -->
+<!-- BEGIN OF GTKSHEET FUNCTIONS -->
+<!-- ****************************** -->
+
+<refsect1>
+  <title>Functions</title>
+
+  <refsect2 id="function-gtksheet--gtksheet-check-version">
+    <title>gtksheet.gtk_sheet_check_version</title>
+    <programlisting><methodsynopsis language="python">
+  	  <methodname>gtksheet.gtksheet_check_version</methodname>
+      <methodparam><parameter role="keyword">required_major</parameter></methodparam>
+      <methodparam><parameter role="keyword">required_minor</parameter></methodparam>
+      <methodparam><parameter role="keyword">required_micro</parameter></methodparam>
+      </methodsynopsis></programlisting>
+
+    <variablelist>
+      <varlistentry>
+  	    <term><parameter role="keyword">required_major</parameter>&nbsp;:</term>
+    	  <listitem><simpara>major version number to check</simpara></listitem>
+      </varlistentry>
+      <varlistentry>
+  	    <term><parameter role="keyword">required_minor</parameter>&nbsp;:</term>
+    	  <listitem><simpara>minor version number to check</simpara></listitem>
+      </varlistentry>
+      <varlistentry>
+  	    <term><parameter role="keyword">required_micro</parameter>&nbsp;:</term>
+    	  <listitem><simpara>micro version number to check</simpara></listitem>
+      </varlistentry>
+    <varlistentry>
+	    <term><emphasis>Returns</emphasis>&nbsp;:</term>
+	    <listitem><simpara> <literal>None</literal> if all the version numbers 
+        match the gtksheet library version numbers, else it returns a string 
+        with a  descriptive error message.
+        </simpara></listitem>
+    </varlistentry>
+    </variablelist>
+
+      <para>
+        The <methodname>gtksheet_check_version</methodname>() function checks
+        that the indicated version numbers match the gtksheet library
+        version and returns a descriptive error message if these numbers do not
+        match.
+      </para>
+  </refsect2>
+
+
+</refsect1>
+  
+<!-- **************************** -->
+<!-- BEGIN OF GTKSHEET SIGNALS -->
+<!-- **************************** --> 
+ 
+<refsect1>
+    <title>Signals</title>
+
+  <refsect2 id="signal-gtksheet--activate">
+    <title>The "activate" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the activated cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the activated cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "activate" signal is emitted whenever a cell is activated, either 
+      programatically or by the user when clicking on it.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--changed">
+    <title>The "changed" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the changed cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the changed cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "changed" signal is emitted when typing into the active cell, changing
+      its content. It is emitted after each key press in cell and after 
+      deactivating cell..
+    </para>
+  </refsect2>
+
+</refsect1>
+</refentry>

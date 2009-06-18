@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[  
+<!ENTITY % entities SYSTEM "entities.docbook">
+%entities;
+<!ENTITY builddate SYSTEM "builddate.xml">
+]>
+<book id="pygtksheet" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <bookinfo>
+    <pubdate>&builddate;</pubdate>
+    <title>Python GtkSheet Reference Manual</title>
+    <edition>PyGtkSheet Reference Manual for PyGtkSheet &version;</edition>
+    <releaseinfo>For PyGtkSheet version &version;</releaseinfo>
+    <authorgroup>
+      <author>
+	<firstname>Víctor Manuel</firstname>
+	<surname>Hernández-Rocamora</surname>
+      </author>
+    </authorgroup>
+    <abstract>
+      <para>This reference describes the classes of the Python GtkSheet module.</para>
+    </abstract>
+  </bookinfo>
+  <toc>
+  </toc>
+
+
+  <chapter id="gtksheet-class-reference" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>The PyGtkSheet Class Reference</title>
+
+    <!-- GTKMOZEMBED OBJECTS -->
+
+    <xi:include href="gtksheet-gtksheet.xml"/>
+
+  </chapter>
+
+</book>

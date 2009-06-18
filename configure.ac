@@ -94,6 +94,33 @@ if test "x$enable_numpy" != xno; then
   CPPFLAGS="$save_CPPFLAGS"
 fi
 
+dnl Building documentation
+AC_ARG_ENABLE(docs,
+  AC_HELP_STRING([--enable-docs], [Enable documentation building]),enable_docs=$enableval,
+  enable_docs=no)
+if test "${enable_docs}" != no; then
+  dnl Check for xsltproc
+  AC_PATH_PROG([XSLTPROC], [xsltproc])
+  if test -z "$XSLTPROC"; then
+    enable_docs=no
+  fi
+fi
+
+AM_CONDITIONAL(ENABLE_DOCS, test x$enable_docs != xno)
+
+PYGOBJECT_INCLUDEDIR=`$PKG_CONFIG --variable=pygtkincludedir pygobject-2.0`
+AC_SUBST(PYGOBJECT_INCLUDEDIR)
+
+PYGOBJECT_DATADIR=`$PKG_CONFIG --variable=datadir pygobject-2.0`
+AC_SUBST(PYGOBJECT_DATADIR)
+
+PYGOBJECT_FIXXREF="$PYTHON `$PKG_CONFIG --variable=fixxref pygobject-2.0`"
+AC_SUBST(PYGOBJECT_FIXXREF)
+
+PYGOBJECT_PYGDOCS="`$PKG_CONFIG --variable=pygdocs pygobject-2.0`"
+AC_SUBST(PYGOBJECT_PYGDOCS)
+
+
 dnl add debugging options ...
 changequote(,)dnl
 if test "x$GCC" = xyes; then
@@ -112,6 +139,8 @@ changequote([,])dnl
 AC_CONFIG_FILES(
   Makefile
   python-gtksheet.pc
+  docs/entities.docbook
+  docs/Makefile
   gtksheet/Makefile
   python-gtksheet.spec)
 AC_OUTPUT

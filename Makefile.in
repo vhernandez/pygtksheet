@@ -139,6 +139,10 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PKG_CONFIG = @PKG_CONFIG@
+PYGOBJECT_DATADIR = @PYGOBJECT_DATADIR@
+PYGOBJECT_FIXXREF = @PYGOBJECT_FIXXREF@
+PYGOBJECT_INCLUDEDIR = @PYGOBJECT_INCLUDEDIR@
+PYGOBJECT_PYGDOCS = @PYGOBJECT_PYGDOCS@
 PYGTK_CFLAGS = @PYGTK_CFLAGS@
 PYGTK_CODEGENDIR = @PYGTK_CODEGENDIR@
 PYGTK_DEFSDIR = @PYGTK_DEFSDIR@
@@ -155,6 +159,7 @@ SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
 VERSION = @VERSION@
+XSLTPROC = @XSLTPROC@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -214,7 +219,7 @@ top_srcdir = @top_srcdir@
 
 # require automake-1.5
 AUTOMAKE_OPTIONS = 1.5
-SUBDIRS = gtksheet
+SUBDIRS = gtksheet docs
 CLEANFILES = 
 EXTRA_DIST = autogen.sh m4/python.m4 python-gtksheet.spec \
 	python-gtksheet.spec.in python-gtksheet.pc.in \
