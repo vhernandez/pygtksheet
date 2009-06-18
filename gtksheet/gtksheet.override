@@ -129,7 +129,6 @@ override gtk_sheet_get_visible_range
 static PyObject *
 _wrap_gtk_sheet_get_visible_range(PyGObject *self, PyObject *args, PyObject *kwargs)
 {
-    static char *kwlist[] = { "range", NULL };
     PyObject *py_range;
     GtkSheetRange range = {0,0,0,0};
     
