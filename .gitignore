@@ -1,0 +1,11 @@
+python-gtksheet.pc
+python-gtksheet.spec
+autom4te.cache/*
+Makefile
+Makefile.in
+configure
+config.status
+config.guess
+config.log
+autoscan.log
+libtool

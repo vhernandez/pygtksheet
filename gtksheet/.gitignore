@@ -1,0 +1,6 @@
+gtksheet.c
+*.so
+*.l[oa]
+.libs/*
+.deps/*
+
