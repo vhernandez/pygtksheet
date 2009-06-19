@@ -1,0 +1,156 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+<!ENTITY nbsp "&#x00A0;">
+]>
+<refentry id="class-gtksheetrange">
+  <refmeta>
+    <refentrytitle>gtksheet.SheetRange</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>PyGtkSheet Docs</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname>gtksheet.SheetRange</refname>
+    <refpurpose>an object holding data about a range of cells</refpurpose>
+  </refnamediv>
+
+<!-- ******************************* -->
+<!-- BEGIN OF GTKSHEETRANGE SYNOPSIS -->
+<!-- ******************************* -->
+<refsect1>
+  <title>Synopsis</title>
+
+  <classsynopsis language="python">
+      <ooclass><classname>gtksheet.SheetRange</classname></ooclass>
+      <ooclass><classname>gobject.GBoxed</classname></ooclass>
+
+      <constructorsynopsis language="python">
+	      <methodname><link linkend="constructor-gtksheet">gtksheet.SheetRange</link></methodname>
+	      <methodparam><parameter role="keyword">row0</parameter><initializer>0</initializer></methodparam>
+	      <methodparam><parameter role="keyword">col0</parameter><initializer>0</initializer></methodparam>
+	      <methodparam><parameter role="keyword">rowi</parameter><initializer>0</initializer></methodparam>
+	      <methodparam><parameter role="keyword">coli</parameter><initializer>0</initializer></methodparam>
+      </constructorsynopsis>
+  </classsynopsis>
+</refsect1>
+
+<!-- ********************************* -->
+<!-- BEGIN OF GTKSHEETRANGE ATTRIBUTES -->
+<!-- ********************************* -->
+
+ <refsect1>
+    <title>Attributes</title>
+
+    <blockquote role="properties">
+      <informaltable pgwide="1" frame="none">
+	<tgroup cols="3">
+	<?dbhtml cellpadding="5"?>
+	  <colspec column="1" colwidth="1in"/>
+	  <colspec column="2" colwidth="1in"/>
+	  <colspec column="3" colwidth="4in"/>
+	  <tbody>
+
+	    <row valign="top">
+	      <entry>"col0"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The column number of the top-left cell in the range.</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"coli"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The column number of the bottom-right cell in the range.</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"row0"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The row number of the top-left cell in the range.</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"rowi"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The row number of the bottom-right cell in the range.</entry>
+	    </row>
+
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </blockquote>
+
+  </refsect1>
+
+
+<!-- ***************************** -->
+<!-- BEGIN OF GTKSHEET DESCRIPTION -->
+<!-- ***************************** -->
+
+<refsect1 id="description-gtksheetrange">
+  <title>Description</title>
+
+  <para>
+  <link linkend="class-gtksheetrange">
+  <classname>gtkseet.SheetRange</classname></link> is an object holding data about a range of cells. It is used
+  to specify a range of cells when calling several <link linkend="class-gtksheet">
+  <classname>gtksheet.Sheet</classname></link> methods.
+  </para>
+  <para>
+  The range of cells specified by a <classname>gtkseet.SheetRange</classname> 
+  starts with the top-left cell indicated by "row0" and "col0" attributes to the
+  bottom-right cell indicated by "rowi" and "coli".
+  </para>
+
+</refsect1>
+
+<!-- ********************************** -->
+<!-- BEGIN OF GTKSHEETRANGE CONSTRUCTOR -->
+<!-- ********************************** -->
+
+<refsect1 id="constructor-gtksheetrange">
+  <title>Constructor</title>
+
+  <programlisting><constructorsynopsis language="python">
+	  <methodname>gtksheet.Sheet</methodname>
+	  <methodparam><parameter role="keyword">row0</parameter><initializer>0</initializer></methodparam>
+	  <methodparam><parameter role="keyword">col0</parameter><initializer>0</initializer></methodparam>
+	  <methodparam><parameter role="keyword">rowi</parameter><initializer>0</initializer></methodparam>
+	  <methodparam><parameter role="keyword">coli</parameter><initializer>0</initializer></methodparam>
+  </constructorsynopsis></programlisting>
+    
+  <variablelist>
+    <varlistentry>
+    	<term><parameter role="keyword">row0</parameter>&nbsp;:</term>
+    	<listitem><simpara>the row number of the top-left cell in the range.</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">col0</parameter>&nbsp;:</term>
+    	<listitem><simpara>the column number of the top-left cell in the range.</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">rowi</parameter>&nbsp;:</term>
+    	<listitem><simpara>the row number of the bottom-right cell in the range.</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+    	<term><parameter role="keyword">coli</parameter>&nbsp;:</term>
+    	<listitem><simpara>the column number of the bottom-right cell in the range.</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+	    <term><emphasis>Returns</emphasis>&nbsp;:</term>
+	    <listitem><simpara>a new 
+        <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link> object.
+        </simpara></listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>
+  Creates a new <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link> object
+  with the attributes specified by <parameter>row0</parameter>, <parameter>col0</parameter>,
+  <parameter>rowi</parameter> and <parameter>coli</parameter>.
+  </para>
+
+</refsect1>
+</refentry>
+

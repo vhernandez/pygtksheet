@@ -32,7 +32,7 @@
     <!-- GTKSHEET OBJECTS -->
 
     <xi:include href="gtksheet-gtksheet.xml"/>
-
+    <xi:include href="gtksheet-gtksheetrange.xml"/>
   </chapter>
 
 </book>

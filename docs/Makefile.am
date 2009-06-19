@@ -8,11 +8,13 @@ PDF_STYLE = $(PYGOBJECT_DATADIR)/pygobject/xsl/pdf-style.xsl
 
 XMLFILES = \
 	gtksheet-classes.xml \
-	gtksheet-gtksheet.xml
+	gtksheet-gtksheet.xml \
+	gtksheet-gtksheetrange.xml
 
 HTMLdir = $(datadir)/gtk-doc/html/pygtksheet
 HTML_DATA =					\
 	html/class-gtksheet.html		\
+	html/class-gtksheetrange.html		\
 	html/gtksheet-class-reference.html	\
 	html/pygtksheet.devhelp		\
 	html/index.html				\
