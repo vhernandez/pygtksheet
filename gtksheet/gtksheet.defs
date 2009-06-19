@@ -815,7 +815,7 @@
   (c-name "gtk_sheet_range_clear")
   (return-type "none")
   (parameters
-    '("const-GtkSheetRange*" "range")
+    '("const-GtkSheetRange*" "range" (null-ok) (default "NULL"))
   )
 )
 
@@ -824,7 +824,7 @@
   (c-name "gtk_sheet_range_delete")
   (return-type "none")
   (parameters
-    '("const-GtkSheetRange*" "range")
+    '("const-GtkSheetRange*" "range" (null-ok) (default "NULL"))
   )
 )
 
