@@ -3025,10 +3025,514 @@ if __name__ == '__main__':
     </para>
   </refsect2>
 
+  <refsect2 id="method-gtksheet--set-column-width">
+    <title>gtksheet.Sheet.set_column_width</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_column_width</methodname>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">width</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">width</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the new width of the column, in pixels</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>set_column_width</methodname>() method changes the width of
+    the column indicated by <parameter>column</parameter> to the value of 
+    <parameter>width</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--set-row-height">
+    <title>gtksheet.Sheet.set_row_height</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_row_height</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">height</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">height</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the new height of the column, in pixels</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>set_row_height</methodname>() method changes the height of
+    the row indicated by <parameter>row</parameter> to the value of 
+    <parameter>height</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--add-column">
+    <title>gtksheet.Sheet.add_column</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>add_column</methodname>
+  	    <methodparam><parameter role="keyword">ncols</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">ncols</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the number of columns to add</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>add_column</methodname>() method appends a number of columns
+    to the end of the sheet (after the last column). 
+    The number of columns to add is indicated by <parameter>ncols</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--add-row">
+    <title>gtksheet.Sheet.add_row</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>add_row</methodname>
+  	    <methodparam><parameter role="keyword">nrows</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">nrows</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the number of rows to add</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>add_row</methodname>() method appends a number of rows
+    to the end of the sheet (after the last row). 
+    The number of rows to add is indicated by <parameter>nrows</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--insert-columns">
+    <title>gtksheet.Sheet.insert_columns</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>insert_columns</methodname>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">ncols</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number indicating the column before which
+          new columns will be inserted</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">ncols</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the number of columns to insert</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>insert_columns</methodname>() method inserts a number of 
+    columns before the column indicated by <parameter>col</parameter>.
+    The number of columns to add is indicated by <parameter>ncols</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--insert-rows">
+    <title>gtksheet.Sheet.insert_rows</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>insert_rows</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">nrows</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number indicating the row before which
+          new rows will be inserted</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">nrows</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the number of rows to insert</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>insert_rows</methodname>() method inserts a number of 
+    rows before the row indicated by <parameter>row</parameter>.
+    The number of rows to add is indicated by <parameter>nrows</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--delete-columns">
+    <title>gtksheet.Sheet.delete_columns</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>delete_columns</methodname>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">ncols</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">ncols</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the number of columns to delete</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>delete_columns</methodname>() method removes a number of 
+    columns from the sheet. A number of columns, determined by 
+    <parameter>ncols</parameter>, will be deleted starting from the column 
+    indicated by <parameter>col</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--delete-rows">
+    <title>gtksheet.Sheet.delete_rows</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>delete_rows</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">nrows</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">nrows</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the number of rows to delete</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>delete_rows</methodname>() method removes a number of 
+    rows from the sheet. A number of rows, determined by 
+    <parameter>nrows</parameter>, will be deleted starting from the row 
+    indicated by <parameter>row</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-background">
+    <title>gtksheet.Sheet.range_set_background</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_background</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">color</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose background color will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <classname>gdk.Color</classname> to be used as
+          the background color of the cells in <parameter>urange</parameter>
+          
+          </simpara></listitem>
+	    </varlistentry>
+
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_background</methodname>() method changes the 
+    background color of the cells indicated by <parameter>urange</parameter> to
+    the color indicated by <parameter>color</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-foreground">
+    <title>gtksheet.Sheet.range_set_foreground</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_foreground</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">color</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose foreground color will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <classname>gdk.Color</classname> to be used as
+          the foreground color of the cells in <parameter>urange</parameter>          
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_foreground</methodname>() method changes the 
+    foreground color of the cells indicated by <parameter>urange</parameter> to
+    the color indicated by <parameter>color</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-justification">
+    <title>gtksheet.Sheet.range_set_justification</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_justification</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">just</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose justification will be changed
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">just</parameter>&nbsp;:</term>
+    	  <listitem><simpara>justification type</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_justification</methodname>() method changes the 
+    justification type of the cells indicated by <parameter>urange</parameter> to
+    the value of <parameter>just</parameter>. Possible values for <parameter>just</parameter>
+    are <literal>gtk.JUSTIFY_LEFT</literal>, <literal>gtk.JUSTIFY_RIGHT</literal> and  
+    <literal>gtk.JUSTIFY_CENTER</literal>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--column-set-justification">
+    <title>gtksheet.Sheet.column_set_justification</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>column_set_justification</methodname>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">just</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">just</parameter>&nbsp;:</term>
+    	  <listitem><simpara>justification type</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>column_set_justification</methodname>() method changes the 
+    justification type of the cells in the column indicated by <parameter>col</parameter> to
+    the value of <parameter>just</parameter>. Possible values for <parameter>just</parameter>
+    are <literal>gtk.JUSTIFY_LEFT</literal>, <literal>gtk.JUSTIFY_RIGHT</literal> and  
+    <literal>gtk.JUSTIFY_CENTER</literal>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-editable">
+    <title>gtksheet.Sheet.range_set_editable</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_editable</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">editable</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose properties will be changed
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">editable</parameter>&nbsp;:</term>
+    	  <listitem><simpara>if <literal>True</literal> the contents of the cells in the range can be changed by the user</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_editable</methodname>() method enables or disables the 
+    user to change the contents of the cells indicated by <parameter>urange</parameter>. 
+    If <parameter>editable</parameter> is <literal>False</literal> the cell contents
+    can not be modified by the user.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-visible">
+    <title>gtksheet.Sheet.range_set_visible</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_visible</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">visible</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose properties will be changed
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">visible</parameter>&nbsp;:</term>
+    	  <listitem><simpara>if <literal>True</literal> the cells in the range are visible</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_visible</methodname>() method shows or hides  the 
+    the cells indicated by <parameter>urange</parameter>.
+    If <parameter>visible</parameter> is <literal>False</literal> the cells are
+    hidden.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-border">
+    <title>gtksheet.Sheet.range_set_border</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_border</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">mask</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">width</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">line_style</parameter></methodparam>
+
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose border properties will be changed
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">mask</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a bitmask indicating the sides whose border properties will be set</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">width</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the width of the border, in pixels</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">line_style</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the line style of the border </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_border</methodname>() method sets the border properties
+    of the cell in the range indicated by <parameter>urange</parameter>.
+    </para>
+    <para>The parmeter <parameter>mask</parameter> is a combination of the border
+    flags <literal>gtksheet.SHEET_BORDER_RIGHT</literal>, <literal>gtksheet.SHEET_BORDER_LEFT</literal>,
+    <literal>gtksheet.SHEET_BORDER_TOP</literal> and <literal>gtksheet.SHEET_BORDER_TOP</literal>.
+    It indicates the side of the block of cells indicated by <parameter>urange</parameter>
+    whose properties of the cells. For example, to change the left and right borders
+    use <literal>gtksheet.SHEET_BORDER_RIGHT | gtksheet.SHEET_BORDER_LEFT </literal>.
+    </para>
+    <para>
+    The width of the border is determined by <parameter>width</parameter> and 
+    the line style is determined by <parameter>line_style</parameter>. The values
+    of <parameter>line_style</parameter> can be <literal>gtk.gdk.LINE_SOLID</literal>,
+    <literal>gtk.gdk.LINE_ON_OFF_DASH</literal> and <literal>gtk.gdk.LINE_DOUBLE_DASH</literal>.
+    </para>
+    <para>
+    As small example which sets the top and bottom borders of a block of cells
+    from cell (1,1) to cell (5,5) with a width of 5 and a dashed line style:
+    </para>
+<programlisting language="python">
+import gtksheet
+s = gtksheet.Sheet(20, 20)
+s.range_set_border(gtksheet.SheetRange(1,1,5,5), 
+                   gtksheet.SHEET_BORDER_TOP | gtksheet.SHEET_BORDER_BOTTOM,
+                   5,
+                   gtk.gdk.LINE_ON_OFF_DASH)
+</programlisting>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-border-color">
+    <title>gtksheet.Sheet.range_set_border_color</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_border_color</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">color</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose border color will be set
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">color</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <classname>gtk.gdk.Color</classname> that will be used as the new border color</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_border_color</methodname>() method sets the border color of
+    of the cell in the range indicated by <parameter>urange</parameter> to the value
+    of <parameter>color</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--range-set-font">
+    <title>gtksheet.Sheet.range_set_font</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>range_set_font</methodname>
+  	    <methodparam><parameter role="keyword">urange</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">font</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">urange</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          indicating the range of cells whose properties will be changed
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">font</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a <classname>pango.FontDescription</classname> which
+          will be used to set the font of the cells
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>range_set_font</methodname>() method sets the font used to
+    render the contents of the cells in the range indicated by <parameter>urange</parameter>.
+    The font is set according to the font description provided with the 
+    <parameter>font</parameter> parameter.
+    </para>
+  </refsect2>
+
+
 </refsect1>
-<!-- ****************************** -->
+<!-- *************************** -->
 <!-- BEGIN OF GTKSHEET FUNCTIONS -->
-<!-- ****************************** -->
+<!-- *************************** -->
 
 <refsect1>
   <title>Functions</title>
