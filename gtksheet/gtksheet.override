@@ -71,6 +71,36 @@ _wrap_gtk_item_entry_new(PyGObject *self, PyObject *args, PyObject *kwargs)
     return 0;
 }
 %%
+override gtk_item_entry_set_text kwargs
+static PyObject *
+_wrap_gtk_item_entry_set_text(PyGObject *self, PyObject *args, PyObject *kwargs)
+{
+    static char *kwlist1[] = { "text", NULL };
+    static char *kwlist2[] = { "text", "justification", NULL };
+    gchar *text;
+    PyObject *py_just;
+    GtkJustification just = GTK_JUSTIFY_LEFT;
+
+    if (PyArg_ParseTupleAndKeywords(args, kwargs, "sO:GtkItemEntry.set_text", kwlist2, &text, &py_just))
+    {
+        /* Returns -1 on failure  and 0 on success */
+        if (pyg_enum_get_value(GTK_TYPE_JUSTIFICATION, py_just, (gint *)&just))
+            return NULL;
+        
+        gtk_item_entry_set_text(GTK_ITEM_ENTRY(self->obj), text, just);
+
+    } else if (PyErr_Clear(),
+           PyArg_ParseTupleAndKeywords(args, kwargs, "s:GtkItemEntry.set_text", kwlist1, &text))
+    {
+        gtk_item_entry_set_text(GTK_ENTRY(self->obj), text, GTK_ITEM_ENTRY(self->obj)->justification);
+
+    } else
+        return NULL;
+    
+    Py_INCREF(Py_None);
+    return Py_None;
+}
+%%
 new-constructor GTK_TYPE_ITEM_ENTRY
 %%
 ignore
