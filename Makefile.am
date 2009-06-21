@@ -16,8 +16,9 @@ EXTRA_DIST += \
   python-gtksheet.spec.in \
   python-gtksheet.pc.in \
   examples/bordercombo.py \
-  examples/fontcombo.py \
   examples/complex_test.py \
+  examples/fontcombo.py \
+  examples/move_range_test.py \
   examples/simple_test.py 
 
 snap:
