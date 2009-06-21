@@ -1,0 +1,121 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+<!ENTITY nbsp "&#x00A0;">
+]>
+<refentry id="class-gtksheetcellattr">
+  <refmeta>
+    <refentrytitle>gtksheet.SheetCellAttr</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>PyGtkSheet Docs</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname>gtksheet.SheetCellAttr</refname>
+    <refpurpose>an object holding a gtksheet.Sheet cell attributes</refpurpose>
+  </refnamediv>
+
+<!-- ********************************** -->
+<!-- BEGIN OF GTKSHEETCELLATTR SYNOPSIS -->
+<!-- ********************************** -->
+<refsect1>
+  <title>Synopsis</title>
+
+  <classsynopsis language="python">
+      <ooclass><classname>gtksheet.SheetCellAttr</classname></ooclass>
+      <ooclass><classname>gobject.GBoxed</classname></ooclass>
+  </classsynopsis>
+</refsect1>
+
+<!-- ************************************ -->
+<!-- BEGIN OF GTKSHEETCELLATTR ATTRIBUTES -->
+<!-- ************************************ -->
+
+<refsect1>
+    <title>Attributes</title>
+
+    <blockquote role="properties">
+      <informaltable pgwide="1" frame="none">
+	<tgroup cols="3">
+	<?dbhtml cellpadding="5"?>
+	  <colspec column="1" colwidth="1in"/>
+	  <colspec column="2" colwidth="1in"/>
+	  <colspec column="3" colwidth="4in"/>
+	  <tbody>
+
+	    <row valign="top">
+	      <entry>"background"</entry>
+	      <entry>Read</entry>
+	      <entry>The background color of the cell as <classname>gtk.gdk.Color</classname></entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"border"</entry>
+	      <entry>Read</entry>
+	      <entry>A <link linkend="class-gtksheetcellborder">
+            <classname>gtksheet.SheetCellBorder</classname></link> with 
+            information about the cell border
+         </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"foreground"</entry>
+	      <entry>Read</entry>
+	      <entry>The foreground color of the cell as <classname>gtk.gdk.Color</classname></entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"font_desc"</entry>
+	      <entry>Read</entry>
+	      <entry>A <classname>pango.FontDescription</classname> object which describes
+          the font used to render the text contents of the cell
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"is_editable"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the cell contents can be edited by the user</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"is_visible"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the cell is visible</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"justification"</entry>
+	      <entry>Read</entry>
+	      <entry>The justification type.</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </blockquote>
+
+</refsect1>
+
+
+<!-- ************************************* -->
+<!-- BEGIN OF GTKSHEETCELLATTR DESCRIPTION -->
+<!-- ************************************* -->
+
+<refsect1 id="description-gtksheetcellattr">
+  <title>Description</title>
+
+  <para>
+  <link linkend="class-gtksheetcellattr">
+  <classname>gtkseet.SheetCellAttr</classname></link> is an object holding a
+  cell attributes of a <classname>gtksheet.Sheet</classname> cell. 
+  It is returned by the <link linkend="method-gtksheet--get-attributes">
+  <methodname>get_attributes</methodname></link>() method of a 
+  <link linkend="class-gtksheet"><classname>gtksheet.Sheet</classname></link> widget.
+  All its attributes are read-only.
+  </para>
+
+</refsect1>
+
+</refentry>
+

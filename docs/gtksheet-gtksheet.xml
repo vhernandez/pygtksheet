@@ -791,6 +791,97 @@
 
   </refsect1>
 
+<!-- ********************************** -->
+<!-- BEGIN OF GTKSHEET CHILD PROPERTIES -->
+<!-- ********************************** -->
+
+<refsect1 id="child-properties-gtksheet">
+    <title>gtksheet.Sheet Child Properties</title>
+
+    <blockquote role="properties">
+      <informaltable pgwide="1" frame="none">
+	<tgroup cols="3">
+	  <colspec column="1" colwidth="1in"/>
+	  <colspec column="2" colwidth="1in"/>
+	  <colspec column="3" colwidth="4in"/>
+	  <tbody>
+
+	    <row valign="top">
+	      <entry>"attached-to-cell"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>True</literal>, the child's position is kept attached 
+          to a cell the child is attached to</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"column"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The column the child is attached to</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"floating"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>If <literal>False</literal>, the child size is kept within the 
+          area of the cell the child is attached to </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"row"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The row the child is attached to</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"x"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The child X position</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"x-options"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>the horizontal behavior of the child - a combination
+of: <literal>gtk.EXPAND</literal>, <literal>gtk.SHRINK</literal> and
+<literal>gtk.FILL</literal></entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"x-padding"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>Extra space added between the child widget and the left
+and right cell borders, in pixels</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"y"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>The child Y position</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"y-options"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>the vertical behavior of the child - a combination of:
+<literal>gtk.EXPAND</literal>, <literal>gtk.SHRINK</literal> and
+<literal>gtk.FILL</literal></entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"y-padding"</entry>
+	      <entry>Read-Write</entry>
+	      <entry>Extra space added between the child widget and the top
+and bottom cell borders, in pixels</entry>
+	    </row>
+
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </blockquote>
+
+</refsect1>
+
+
 <!-- *********************************** -->
 <!-- BEGIN OF GTKSHEET SIGNAL PROTOTYPES -->
 <!-- *********************************** -->
@@ -2953,11 +3044,11 @@ if __name__ == '__main__':
   </refsect2>
 
   <refsect2 id="method-gtksheet--get-pixel-info">
-    <title>gtksheet.Sheet.get_pixel_finfo</title>
+    <title>gtksheet.Sheet.get_pixel_info</title>
     <programlisting><methodsynopsis language="python">
 	    <methodname>get_pixel_info</methodname>
-  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
-  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">x</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">y</parameter></methodparam>
 	    </methodsynopsis></programlisting>
       
     <variablelist>
@@ -3528,6 +3619,339 @@ s.range_set_border(gtksheet.SheetRange(1,1,5,5),
     </para>
   </refsect2>
 
+  <refsect2 id="method-gtksheet--get-attributes">
+    <title>gtksheet.Sheet.get_attributes</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_attributes</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetcellattr"><classname>gtksheet.SheetCellAttr</classname></link>
+          object containing the cell attributes or <literal>None</literal> 
+          if the the indicated cell does not exist.
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>get_attributes</methodname>() method returns the cell
+    attributes of the cell indicated by <parameter>row</parameter> and <parameter>column</parameter>. 
+    If the indicated cell does not exist, <literal>None</literal> is returned.
+    </para>
+    <para>
+    The cell attributes include text formatting attributes such as justification type,
+    font description and foreground color, as well as the border attributes. See the
+    <link linkend="class-gtksheetcellattr"><classname>gtksheet.SheetCellAttr</classname></link>
+    attributes for more information.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--put">
+    <title>gtksheet.Sheet.put</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>put</methodname>
+  	    <methodparam><parameter role="keyword">child</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">x</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">y</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">child</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">x</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the X position of the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">y</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the Y position of the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetchild"><classname>gtksheet.SheetChild</classname></link>
+          object containing information about the child's packing
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>put</methodname>() method adds <parameter>child</parameter> 
+    to the sheet and places its upper, left corner at the position specified by 
+    <parameter>x</parameter> and <parameter>y</parameter>. </para>
+    <para>
+    The widget is added with the
+    "attached_to_cell" child property set to <literal>False</literal> (which means
+    that the child will stay at the specified position regardless the 
+    configuration of rows and columns) and with 
+    the "floating" child property set to <literal>True</literal> (which means 
+    that the sheet cells will not be resized according to the widget child size 
+    requeriments).
+    </para>
+    <para>
+    To change the position of a child added with this function (with the 
+    "attached-to-cell" child property set to <literal>False</literal> you can 
+    use the <link linkend="method-gtksheet--move-child"><methodname>move_child
+    </methodname></link>() method.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--attach-floating">
+    <title>gtksheet.Sheet.attach_floating</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>attach_floating</methodname>
+  	    <methodparam><parameter role="keyword">widget</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">child</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row the child will be attached to</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column the child will be attached to</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>attach_floating</methodname>() method adds <parameter>widget</parameter> 
+    to the sheet and attaches its position to the position of the cell specified 
+    by <parameter>row</parameter> and <parameter>col</parameter>, which means that the
+    widget will be moved when the cell position changes.
+    </para>
+    <para>
+    The widget is added with the "floating" child property set to 
+    <literal>True</literal> (which means that the cells
+    will not be resized according to the widget child size requeriments).
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--attach-default">
+    <title>gtksheet.Sheet.attach_default</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>attach_default</methodname>
+  	    <methodparam><parameter role="keyword">widget</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">child</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row the child will be attached to</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column the child will be attached to</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>attach_default</methodname>() method adds <parameter>widget</parameter> 
+    to the sheet and attaches its position to the position of the cell specified 
+    by <parameter>row</parameter> and <parameter>col</parameter>, which means that the
+    widget will be moved when the cell position changes.
+    </para>
+    <para>
+    The widget is added with the "floating" child property set to 
+    <literal>False</literal> which means that the cell the child is attached to
+    will be resized according to the widget child size requeriments. Moreover the
+    "x-options" and "y-options" child properties are set to <literal>gtk.EXPAND | gtk.FILL</literal>,
+    and the "x-padding" and "y-padding" child properties set to <literal>0</literal>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--attach">
+    <title>gtksheet.Sheet.attach</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>attach</methodname>
+  	    <methodparam><parameter role="keyword">widget</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">child</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the row the child will be attached to</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the column the child will be attached to</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">x-options</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the value of the "x-options" child property</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">y-options</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the value of the "y-options" child property</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">x-padding</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the value of the "x-padding" child property</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">y-padding</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the value of the "y-padding" child property</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>attach</methodname>() method adds <parameter>widget</parameter> 
+    to the sheet and attaches its position to the position of the cell specified 
+    by <parameter>row</parameter> and <parameter>col</parameter>, which means that the
+    widget will be moved when the cell position changes.
+    </para>
+    <para>
+    The widget is added with the "floating" child property set to 
+    <literal>False</literal> which means that the cell the child is attached to
+    will be resized according to the widget child size requeriments.
+    </para>
+    <para>
+    The child properties "x-options", "y-options", "x-padding" and "y-padding"
+    are set according to the values of <parameter>x-options</parameter>,
+    <parameter>y-options</parameter>, <parameter>y-padding</parameter> and
+    <parameter>y-padding</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--move-child">
+    <title>gtksheet.Sheet.move_child</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>move_child</methodname>
+  	    <methodparam><parameter role="keyword">widget</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">x</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">y</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">widget</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">x</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the new X position of the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">y</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the new Y position of the child widget</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>move_child</methodname>() method moves the left corner of 
+    the <parameter>child</parameter> to the position specified by <parameter>x</parameter> and
+    <parameter>y</parameter>. Note that if the "attached-to-cell" child property 
+    for this child is <literal>True</literal> this method will have no effect.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-child-at">
+    <title>gtksheet.Sheet.get_child_at</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_child_at</methodname>
+  	    <methodparam><parameter role="keyword">child</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">child</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">x</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">y</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>a <link linkend="class-gtksheetchild"><classname>gtksheet.SheetChild</classname></link>
+          object containing information about the child's packing, or <literal>None</literal>
+          if no child is attached to the specified cell
+          </simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>get_child_at</methodname>() method returns a 
+    <link linkend="class-gtksheetchild"><classname>gtksheet.SheetChild</classname></link>
+    object containing information about the child attached to the cell 
+    specified by <parameter>row</parameter> and <parameter>col</parameter>.
+    If no child is attached to the indicated cell, <literal>None</literal> is returned.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--button-attach">
+    <title>gtksheet.Sheet.button_attach</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>button_attach</methodname>
+  	    <methodparam><parameter role="keyword">widget</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">col</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">child</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the child widget</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number or -1</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">col</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number or -1</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>button_attach</methodname>() method adds  
+    <parameter>widget</parameter> to a sheet in place of a row or column button.
+    The child attached with this method will be drawn instead of the deault row
+    or column button. To add a widget as a row button set <parameter>column</parameter>
+    to -1 and specify the row number with <parameter>row</parameter>. To add a 
+    widget as a column button set <parameter>row</parameter> to -1 and specify 
+    the column number with <parameter>column</parameter>. If both <parameter>row</parameter>
+    and <parameter>column</parameter> are -1, the widget will not be added to the sheet.
+    </para>
+  </refsect2>
+
 
 </refsect1>
 <!-- *************************** -->
@@ -3579,9 +4003,9 @@ s.range_set_border(gtksheet.SheetRange(1,1,5,5),
 
 </refsect1>
   
-<!-- **************************** -->
+<!-- ************************* -->
 <!-- BEGIN OF GTKSHEET SIGNALS -->
-<!-- **************************** --> 
+<!-- ************************* --> 
  
 <refsect1>
     <title>Signals</title>

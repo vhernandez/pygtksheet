@@ -1,0 +1,189 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+<!ENTITY nbsp "&#x00A0;">
+]>
+<refentry id="class-gtksheetchild">
+  <refmeta>
+    <refentrytitle>gtksheet.SheetChild</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>PyGtkSheet Docs</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname>gtksheet.SheetChild</refname>
+    <refpurpose>an object holding information about a gtksheet.Sheet child</refpurpose>
+  </refnamediv>
+
+<!-- ******************************* -->
+<!-- BEGIN OF GTKSHEETCHILD SYNOPSIS -->
+<!-- ******************************* -->
+<refsect1>
+  <title>Synopsis</title>
+
+  <classsynopsis language="python">
+      <ooclass><classname>gtksheet.SheetChild</classname></ooclass>
+      <ooclass><classname>gobject.GBoxed</classname></ooclass>
+  </classsynopsis>
+</refsect1>
+
+<!-- ********************************* -->
+<!-- BEGIN OF GTKSHEETCHILD ATTRIBUTES -->
+<!-- ********************************* -->
+
+<refsect1>
+    <title>Attributes</title>
+
+    <blockquote role="properties">
+      <informaltable pgwide="1" frame="none">
+	<tgroup cols="3">
+	<?dbhtml cellpadding="5"?>
+	  <colspec column="1" colwidth="1in"/>
+	  <colspec column="2" colwidth="1in"/>
+	  <colspec column="3" colwidth="4in"/>
+	  <tbody>
+
+	    <row valign="top">
+	      <entry>"attached_to_cell"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the child's position is kept attached 
+          to a cell the child is attached to</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"col"</entry>
+	      <entry>Read</entry>
+	      <entry>The column the child is attached to
+         </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"floating"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>False</literal>, the child size is kept within the 
+          area of the cell the child is attached to </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"row"</entry>
+	      <entry>Read</entry>
+	      <entry>The row the child is attached to
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"widget"</entry>
+	      <entry>Read</entry>
+	      <entry>The child widget</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"x"</entry>
+	      <entry>Read</entry>
+	      <entry>The child X position</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"xexpand"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the sheet cell should expand to 
+          take up any extra horizontal space that has been allocated to the sheet.
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"xfill"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the child should fill the horizontal 
+          space allocated to it in the sheet cell. 
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"xshrink"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the child should shrink when the 
+          sheet cell shrinks vertically. 
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"xpadding"</entry>
+	      <entry>Read</entry>
+	      <entry>Extra space to put between the child and its left and right cell borders, in pixels. 
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"y"</entry>
+	      <entry>Read</entry>
+	      <entry>The child Y position</entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"yexpand"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the sheet cell should expand to 
+          take up any extra vertical space that has been allocated to the sheet.
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"yfill"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the child should fill the vertical 
+          space allocated to it in the sheet cell. 
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"yshrink"</entry>
+	      <entry>Read</entry>
+	      <entry>If <literal>True</literal>, the child should shrink when the 
+          sheet cell shrinks vertically. 
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"ypadding"</entry>
+	      <entry>Read</entry>
+	      <entry>Extra space to put between the child and its top and bottom cell borders, in pixels. 
+          </entry>
+	    </row>
+
+	  </tbody>
+	</tgroup>
+      </informaltable>
+    </blockquote>
+
+</refsect1>
+
+
+<!-- ********************************** -->
+<!-- BEGIN OF GTKSHEETCHILD DESCRIPTION -->
+<!-- ********************************** -->
+
+<refsect1 id="description-gtksheetchild">
+  <title>Description</title>
+
+  <para>
+  <link linkend="class-gtksheetchild">
+  <classname>gtkseet.SheetChild</classname></link> is an object holding packing 
+  information about a <classname>gtksheet.Sheet</classname> child widget.
+  It is returned by the 
+  <link linkend="method-gtksheet--put"><methodname>put</methodname></link>() and
+  <link linkend="method-gtksheet--get-child-at"><methodname>get_child_at</methodname></link>()
+  methods of a
+  <link linkend="class-gtksheet"><classname>gtksheet.Sheet</classname></link> widget.
+  </para>
+  <para>
+  All its attributes are read-only. To change the child's packing attributes use
+  the <link linkend="class-gtksheet"><classname>gtksheet.Sheet</classname></link>
+  child properties.
+  </para>
+
+</refsect1>
+
+</refentry>
+

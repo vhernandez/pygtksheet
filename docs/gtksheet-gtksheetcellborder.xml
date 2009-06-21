@@ -1,0 +1,125 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+<!ENTITY nbsp "&#x00A0;">
+]>
+<refentry id="class-gtksheetcellborder">
+  <refmeta>
+    <refentrytitle>gtksheet.SheetCellBorder</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>PyGtkSheet Docs</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname>gtksheet.SheetCellBorder</refname>
+    <refpurpose>an object holding the border attributes of a cell</refpurpose>
+  </refnamediv>
+
+<!-- ************************************ -->
+<!-- BEGIN OF GTKSHEETCELLBORDER SYNOPSIS -->
+<!-- ************************************ -->
+<refsect1>
+  <title>Synopsis</title>
+
+  <classsynopsis language="python">
+      <ooclass><classname>gtksheet.SheetCellBorder</classname></ooclass>
+      <ooclass><classname>gobject.GBoxed</classname></ooclass>
+  </classsynopsis>
+</refsect1>
+
+<!-- ************************************** -->
+<!-- BEGIN OF GTKSHEETCELLBORDER ATTRIBUTES -->
+<!-- ************************************** -->
+
+<refsect1>
+    <title>Attributes</title>
+
+    <blockquote role="properties">
+      <informaltable pgwide="1" frame="none">
+	<tgroup cols="3">
+	<?dbhtml cellpadding="5"?>
+	  <colspec column="1" colwidth="1in"/>
+	  <colspec column="2" colwidth="1in"/>
+	  <colspec column="3" colwidth="4in"/>
+	  <tbody>
+
+	    <row valign="top">
+	      <entry>"cap_style"</entry>
+	      <entry>Read</entry>
+	      <entry>The style of drawing the ends of lines - one of: 
+            <literal>gtk.gdk.CAP_NOT_LAST</literal>, <literal>gtk.gdk.CAP_BUTT</literal>, 
+            <literal>gtk.gdk.CAP_ROUND</literal> or <literal>gtk.gdk.CAP_PROJECTING</literal>.
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"color"</entry>
+	      <entry>Read</entry>
+	      <entry>The border <classname>gtk.gdk.Color</classname></entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"join_style"</entry>
+	      <entry>Read</entry>
+	      <entry>The style used to join lines - one of: <literal>gtk.gdk.JOIN_MITER</literal>, 
+<literal>gtk.gdk.JOIN_ROUND</literal> or <literal>gtk.gdk.JOIN_BEVEL</literal>.
+          </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"line_style"</entry>
+	      <entry>Read</entry>
+	      <entry>The style of drawing lines - one of: <literal>gtk.gdk.LINE_SOLID</literal>, 
+<literal>gtk.gdk.LINE_ON_OFF_DASH</literal> or <literal>gtk.gdk.LINE_DOUBLE_DASH</literal>.
+         </entry>
+	    </row>
+
+	    <row valign="top">
+	      <entry>"mask"</entry>
+	      <entry>Read</entry>
+	      <entry>A combination of border flags indicating the sides of the cell 
+which will have a border drawn - a combination of <literal>gtksheet.SHEET_BORDER_RIGHT</literal>, 
+<literal>gtksheet.SHEET_BORDER_LEFT</literal>, <literal>gtksheet.SHEET_BORDER_TOP</literal> 
+or <literal>gtksheet.SHEET_BORDER_TOP</literal>.
+          </entry>
+	    </row>        
+
+	    <row valign="top">
+	      <entry>"width"</entry>
+	      <entry>Read</entry>
+	      <entry>The border width in pixels</entry>
+	    </row>
+		  </tbody>
+	</tgroup>
+      </informaltable>
+    </blockquote>
+
+</refsect1>
+
+
+<!-- *************************************** -->
+<!-- BEGIN OF GTKSHEETCELLBORDER DESCRIPTION -->
+<!-- *************************************** -->
+
+<refsect1 id="description-gtksheetcellborder">
+  <title>Description</title>
+
+  <para>
+  <link linkend="class-gtksheetcellborder">
+  <classname>gtkseet.SheetCellBorder</classname></link> is an object holding the
+  border attributes of a cell. It is returned by the <link linkend="method-gtksheet--get-attributes">
+  <methodname>get_attributes</methodname></link>() method of a 
+  <link linkend="class-gtksheet"><classname>gtksheet.Sheet</classname></link> widget as the "border"
+  attribute of a <link linkend="class-gtksheetcellattr"><classname>gtksheet.SheetCellAttr</classname></link>.
+  </para>
+  <para>
+  All its attributes are read-only. To set the border properties of a cell use the
+  <link linkend="method-gtksheet--range-set-border"><methodname>range_set_border</methodname></link>() and
+  <link linkend="method-gtksheet--range-set-border-color"><methodname>range_set_border_color</methodname></link>()
+  <classname>gtksheet.Sheet</classname> methods.
+  </para>
+
+</refsect1>
+
+</refentry>
