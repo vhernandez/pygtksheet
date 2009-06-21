@@ -8,6 +8,7 @@ PDF_STYLE = $(PYGOBJECT_DATADIR)/pygobject/xsl/pdf-style.xsl
 
 XMLFILES = \
 	gtksheet-classes.xml            \
+	gtksheet-gtkitementry.xml           \
 	gtksheet-gtksheet.xml           \
 	gtksheet-gtksheetrange.xml      \
 	gtksheet-gtksheetcellattr.xml   \
@@ -16,6 +17,7 @@ XMLFILES = \
 
 HTMLdir = $(datadir)/gtk-doc/html/pygtksheet
 HTML_DATA =	\
+	html/class-gtkitementry.html        \
 	html/class-gtksheet.html            \
 	html/class-gtksheetcellattr.html    \
 	html/class-gtksheetcellborder.html  \

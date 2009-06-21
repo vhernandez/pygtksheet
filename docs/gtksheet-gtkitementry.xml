@@ -1,0 +1,221 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+  "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+<!ENTITY nbsp "&#x00A0;">
+]>
+<refentry id="class-gtkitementry">
+  <refmeta>
+    <refentrytitle>gtksheet.ItemEntry</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>PyGtkSheet Docs</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname>gtksheet.ItemEntry</refname>
+    <refpurpose>a gtk.Entry derived widget to input text in a gtksheet.Sheet widget</refpurpose>
+  </refnamediv>
+
+<!-- ****************************** -->
+<!-- BEGIN OF GTKITEMENTRY SYNOPSIS -->
+<!-- ****************************** -->
+
+<refsect1>
+  <title>Synopsis</title>
+
+  <classsynopsis language="python">
+  <ooclass><classname>gtksheet.ItemEntry</classname></ooclass>
+  <ooclass><classname><link linkend="class-gtkentry">gtk.Entry</link></classname></ooclass>
+    
+  <constructorsynopsis language="python">
+	  <methodname><link linkend="constructor-gtkitementry">gtksheet.ItemEntry</link></methodname>
+	  <methodparam><parameter role="keyword">max</parameter><initializer>0</initializer></methodparam>
+  </constructorsynopsis>
+    
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtkitementry--set-text">set_text</link></methodname>
+	  <methodparam><parameter role="keyword">text</parameter></methodparam>
+	  <methodparam><parameter role="keyword">justification</parameter><initializer>gtk.JUSTIFY_LEFT</initializer></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtkitementry--set-justification">set_justification</link></methodname>
+	  <methodparam><parameter role="keyword">just</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtkitementry--set-cursor-visible">set_cursor_visible</link></methodname>
+	  <methodparam><parameter role="keyword">visible</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtkitementry--get-cursor-visible">get_cursor_visible</link></methodname>
+	  <methodparam></methodparam>
+  </methodsynopsis>
+  </classsynopsis>
+</refsect1>
+
+<!-- ****************************** -->
+<!-- BEGIN OF GTKITEMENTRY ANCESTRY -->
+<!-- ****************************** -->
+
+<refsect1>
+    <title>Ancestry</title>
+
+<synopsis>+-- <link linkend="class-gobject">gobject.GObject</link>
+  +-- <link linkend="class-gtkobject">gtk.Object</link>
+    +-- <link linkend="class-gtkwidget">gtk.Widget</link>
+      +-- <link linkend="class-gtkentry">gtk.Entry</link>
+        +-- <link linkend="class-gtksheet">gtksheet.ItemEntry</link>
+</synopsis>
+</refsect1>
+
+<!-- ********************************* -->
+<!-- BEGIN OF GTKITEMENTRY DESCRIPTION -->
+<!-- ********************************* -->
+
+<refsect1 id="description-gtkitementry">
+  <title>Description</title>
+
+  <para>
+  <link linkend="class-gtkitementry"><classname>gtksheet.ItemEntry</classname></link> is
+  a widget derived from a  <link linkend="class-gtkentry"><classname>gtk.Entry</classname></link> 
+  that it is used by default to input text on a <link linkend="class-gtksheet">
+  <classname>gtksheet.Sheet</classname></link> widget. In contrast to a 
+  <classname>gtk.Entry</classname>, a <classname>gtksheet.ItemEntry</classname>
+  allows to change background and text colors and text justification and can be 
+  dinamically resized.
+  </para>
+
+</refsect1>
+
+
+<!-- ********************************* -->
+<!-- BEGIN OF GTKITEMENTRY CONSTRUCTOR -->
+<!-- ********************************* -->
+
+<refsect1 id="constructor-gtkitementry">
+  <title>Constructor</title>
+
+  <programlisting><constructorsynopsis language="python">
+	  <methodname>gtksheet.ItemEntry</methodname>
+	  <methodparam><parameter role="keyword">max</parameter><initializer>0</initializer></methodparam>
+  </constructorsynopsis></programlisting>
+    
+  <variablelist>
+    <varlistentry>
+    	<term><parameter role="keyword">max</parameter>&nbsp;:</term>
+    	<listitem><simpara>the maximum length of the text in the entry, or 0 for
+no maximum. The value passed in will be limited to the range 0-65536.</simpara></listitem>
+    </varlistentry>
+    <varlistentry>
+	    <term><emphasis>Returns</emphasis>&nbsp;:</term>
+	    <listitem><simpara>a new <link linkend="class-gtkitementry"><classname>gtksheet.ItemEntry</classname></link> object.
+        </simpara></listitem>
+    </varlistentry>
+  </variablelist>
+
+  <para>
+Creates a new <link linkend="class-gtksheet"><classname>gtksheet.ItemEntry</classname></link> object
+with the maximum length specified by <parameter>max</parameter>.
+  </para>
+
+</refsect1>
+
+<!-- ***************************** -->
+<!-- BEGIN OF GTKITEMENTRY METHODS -->
+<!-- ***************************** -->
+
+<refsect1>
+  <title>Methods</title>
+
+  <refsect2 id="method-gtkitementry--set-text">
+    <title>gtksheet.ItemEntry.set_text</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_text</methodname>
+  	    <methodparam><parameter role="keyword">text</parameter></methodparam>
+  	    <methodparam><parameter role="keyword">justification</parameter><initializer>gtk.JUSTIFY_LEFT</initializer></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	    <term><parameter role="keyword">text</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a string to use as the new contents of the itementry</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+  	      <term><parameter role="keyword">justification</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the justification to use to display the itementry text</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>The <methodname>set_text</methodname>() method sets the "text" property 
+to the value of <parameter>text</parameter> and sets the justification type to the value
+of <parameter>justification</parameter>. Possible values for <parameter>justification</parameter>
+are <literal>gtk.JUSTIFY_LEFT</literal>, <literal>gtk.JUSTIFY_RIGHT</literal> and  
+<literal>gtk.JUSTIFY_CENTER</literal>. If the <parameter>justification</parameter>
+argument is not provided, the justification of the itementry is unchanged. The default
+justification in a newly created itementry is <literal>gtk.JUSTIFY_LEFT</literal>.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtkitementry--set-justification">
+    <title>gtksheet.ItemEntry.set_justification</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_justification</methodname>
+  	    <methodparam><parameter role="keyword">just</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">just</parameter>&nbsp;:</term>
+    	  <listitem><simpara>the justification to use to display the itementry text</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>The <methodname>set_justification</methodname>() method sets the 
+justification type to the value of <parameter>justification</parameter>. 
+Possible values for <parameter>justification</parameter>
+are <literal>gtk.JUSTIFY_LEFT</literal>, <literal>gtk.JUSTIFY_RIGHT</literal> and  
+<literal>gtk.JUSTIFY_CENTER</literal>.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtkitementry--set-cursor-visible">
+    <title>gtksheet.ItemEntry.set_cursor_visible</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>set_cursor_visible</methodname>
+  	    <methodparam><parameter role="keyword">visible</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">visible</parameter>&nbsp;:</term>
+    	  <listitem><simpara>if <literal>True</literal> the text cursor will be displayed</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>The <methodname>set_cursor_visible</methodname>() method shows or hides the
+itementry text cursor depending on the value of <parameter>visible</parameter>.
+	</para>
+  </refsect2>
+
+  <refsect2 id="method-gtkitementry--get-cursor-visible">
+    <title>gtksheet.ItemEntry.get_cursor_visible</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_cursor_visible</methodname>
+  	    <methodparam></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara><literal>True</literal> if the text cursor is not hidden</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>The <methodname>get_cursor_visible</methodname>() method returns <literal> 
+True</literal> if itementry text cursor is visible or <literal>False</literal> otherwise.
+	</para>
+  </refsect2>
+</refsect1>
+</refentry>

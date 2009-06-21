@@ -961,7 +961,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>  
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--new-column-width">new_column_width</link>"</term>
+        <term>"<link linkend="signal-gtksheet--new-column-width">new-column-width</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -973,7 +973,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--new-row-height">new_row_height</link>"</term>
+        <term>"<link linkend="signal-gtksheet--new-row-height">new-row-height</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -985,7 +985,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--resize-range">resize_range</link>"</term>
+        <term>"<link linkend="signal-gtksheet--resize-range">resize-range</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -997,7 +997,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--select-column">select_column</link>"</term>
+        <term>"<link linkend="signal-gtksheet--select-column">select-column</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -1008,7 +1008,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--select-range">select_range</link>"</term>
+        <term>"<link linkend="signal-gtksheet--select-range">select-range</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -1019,7 +1019,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--select-row">select_row</link>"</term>
+        <term>"<link linkend="signal-gtksheet--select-row">select-row</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -1030,7 +1030,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--set-cell">set_cell</link>"</term>
+        <term>"<link linkend="signal-gtksheet--set-cell">set-cell</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -1042,7 +1042,7 @@ and bottom cell borders, in pixels</entry>
         </listitem>
       </varlistentry>
       <varlistentry>
-        <term>"<link linkend="signal-gtksheet--set-scroll-adjustments">set_scroll_adjustments</link>"</term>
+        <term>"<link linkend="signal-gtksheet--set-scroll-adjustments">set-scroll-adjustments</link>"</term>
         <listitem>
           <methodsynopsis language="python"><methodname>callback</methodname>
             <methodparam><parameter>sheet</parameter></methodparam>
@@ -1143,10 +1143,11 @@ if __name__ == '__main__':
     </varlistentry>
     <varlistentry>
     	<term><parameter role="keyword">entry_type</parameter>&nbsp;:</term>
-    	<listitem><simpara>A GTK type derived from gtk.Entry to use as the widget
-        for editing cells. For example, you can use a gtk.SpinButton instead of
-        the default gtksheet.ItemEntry. Note that if the browser parameter is 
-        <literal>True</literal>, the entry_type argument is ignored.
+    	<listitem><simpara>A GTK type derived from <link linkend="class-gtkentry">
+<classname>gtk.Entry</classname></link> to use as the widget for editing cells. 
+For example, you can use a <link linkend="class-gtkspinbutton"><classname>gtk.SpinButton</classname></link>
+instead of the default, which is a <link linkend="class-gtkitementry"><classname>gtksheet.ItemEntry</classname></link>. 
+Note that if the browser parameter is <literal>True</literal>, the entry_type argument is ignored.
     </simpara></listitem>
     </varlistentry>
     <varlistentry>
@@ -1226,7 +1227,9 @@ if __name__ == '__main__':
   <para>
     The <methodname>change_entry</methodname>() method can be used to change the
     widget type used to edit the cells content. It must be a type derived from
-    gtk.Entry such as gtk.ItemEntry (the default), gtk.Entry itself or gtk.SpinButton.
+    <classname>gtk.Entry</classname> such as <link linkend="class-gtkitementry">
+    <classname>gtk.ItemEntry</classname></link> (the default), <classname>gtk.Entry</classname> 
+    itself or <classname>gtk.SpinButton</classname>.
   </para>
   </refsect2>
    
@@ -4092,6 +4095,564 @@ s.range_set_border(gtksheet.SheetRange(1,1,5,5),
       deactivating cell..
     </para>
   </refsect2>
+
+  <refsect2 id="signal-gtksheet--clear-cell">
+    <title>The "clear-cell" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the cleared cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the cleared cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "clear-cell" signal is emitted when the content of a cell is erased.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--clip-range">
+    <title>The "clip-range" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>range</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>range</parameter>&nbsp;:</term>
+	      <listitem><simpara>the range of cells that have been marked to be copied to the clipboard</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "clip-range" signal is emitted when <link linend="method-gtksheet--clip-range">
+      <methodname>clip_range</methodname></link>() method is called. The <parameter>
+      range</parameter> parameter of the callback indicates the block of cells have
+      been marked to be copied to the clipboard. Note that your program is reposible
+      for actually copying the cell contents to the clipboard. The <link linend="method-gtksheet--clip-range">
+      <methodname>clip_range</methodname></link>() method just marks the cells
+      to indicate that their respective contents are on the clipboard.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--deactivate">
+    <title>The "deactivate" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the deactivated cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the deactivated cell</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "deactivate-cell" signal is emitted when the content of a cell is 
+      deactivated (it is no longer being edited by the user).
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--move-range">
+    <title>The "move-range" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>range</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>origin_range</parameter>&nbsp;:</term>
+	      <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          specifing the block of cells that were dragged by the user</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>destiny_range</parameter>&nbsp;:</term>
+	      <listitem><simpara>a <link linkend="class-gtksheetrange"><classname>gtksheet.SheetRange</classname></link>
+          specifing the new positions for the dragged cells according to where the user dropped them</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "move-range" signal is emitted when the user drags a block of selected 
+      cells and drops them in a different position in the sheet. Your program is
+      responsible of actually replacing the contents of the <parameter>destiny_range</parameter> cells
+      with the contents of the <parameter>origin_range</parameter> cells.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--new-column-width">
+    <title>The "new-column-width" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>width</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the resized column</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>width</parameter>&nbsp;:</term>
+	      <listitem><simpara>the new width of the column</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "new-column-width" signal is emitted when a column is resized.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--new-row-height">
+    <title>The "new-row-height" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>height</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the resized row</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>height</parameter>&nbsp;:</term>
+	      <listitem><simpara>the new height of the row</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "new-row-height" signal is emitted when a row is resized.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--resize-range">
+    <title>The "resize-range" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>original_range</parameter></methodparam>
+	  <methodparam><parameter>new_range</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>original_range</parameter>&nbsp;:</term>
+	      <listitem><simpara>the orignal <link linkend="class-gtksheetrange">
+          <classname>gtksheet.SheetRange</classname></link> range of selected cells.
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>new_range</parameter>&nbsp;:</term>
+	      <listitem><simpara>the new resized <link linkend="class-gtksheetrange">
+          <classname>gtksheet.SheetRange</classname></link> of selected cells
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "resize-range" signal is emitted when a block of selected cells is resized
+      by the user by clicking in the border of the selected cells and dragging and dropping it.      
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--select-column">
+    <title>The "select-column" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the selected column</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "select-column" signal is emitted when a column is selected.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--select-range">
+    <title>The "select-range" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>range</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>range</parameter>&nbsp;:</term>
+	      <listitem><simpara>the <link linkend="class-gtksheetrange">
+          <classname>gtksheet.SheetRange</classname></link> of selected cells
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "select-range" signal is emitted when a block of cells is selected.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--select-row">
+    <title>The "select-row" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the selected row</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "select-row" signal is emitted when a row is selected.
+    </para>
+  </refsect2>
+
+  <refsect2 id="signal-gtksheet--set-cell">
+    <title>The "set-cell" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>row</parameter>&nbsp;:</term>
+	      <listitem><simpara>the row number of the cell which has been set</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>column</parameter>&nbsp;:</term>
+	      <listitem><simpara>the column number of the cell which has been set</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "set-cell" signal is emitted when the cells text or justification
+      are set.
+    </para>
+  </refsect2>
+
+    <refsect2 id="signal-gtksheet--set-scroll-adjustments">
+      <title>The "set-scroll-adjustments" gtksheet.Sheet Signal</title>
+
+      <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>hadjustment</parameter></methodparam>
+	  <methodparam><parameter>vadjustment</parameter></methodparam>
+	  <methodparam><parameter>user_param1</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	</methodsynopsis></programlisting>
+
+      <variablelist>
+	<varlistentry>
+	  <term><parameter>sheet</parameter>&nbsp;:</term>
+	  <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>hadjustment</parameter>&nbsp;:</term>
+	  <listitem><simpara>a horizontal <link
+linkend="class-gtkadjustment"><classname>gtk.Adjustment</classname></link></simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>vadjustment</parameter>&nbsp;:</term>
+	  <listitem><simpara>a vertical <link
+linkend="class-gtkadjustment"><classname>gtk.Adjustment</classname></link></simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>user_param1</parameter>&nbsp;:</term>
+          <listitem><simpara>the first user parameter (if any) specified
+with the <link
+linkend="method-gobject--connect"><methodname>connect</methodname>()</link>
+method</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>...</parameter>&nbsp;:</term>
+	  <listitem><simpara>additional user parameters (if
+any)</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><emphasis>Returns</emphasis>&nbsp;:</term>
+	  <listitem><simpara><literal>True</literal> if the signal was
+	  handled.</simpara></listitem>
+	</varlistentry>
+      </variablelist>
+
+      <para>The "set-scroll-adjustments" signal is emitted when new
+horizontal or vertical adjustments are set on the
+<parameter>sheet</parameter>.</para>
+
+    </refsect2>
+
+    <refsect2 id="signal-gtksheet--traverse">
+      <title>The "traverse" gtksheet.Sheet Signal</title>
+
+      <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>row</parameter></methodparam>
+	  <methodparam><parameter>column</parameter></methodparam>
+	  <methodparam><parameter>new_row</parameter></methodparam>
+	  <methodparam><parameter>new_column</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	</methodsynopsis></programlisting>
+
+      <variablelist>
+	<varlistentry>
+	  <term><parameter>sheet</parameter>&nbsp;:</term>
+	  <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>row</parameter>&nbsp;:</term>
+	  <listitem><simpara>the previously active cell row number</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>column</parameter>&nbsp;:</term>
+	  <listitem><simpara>he previously active cell column number</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>new_row</parameter>&nbsp;:</term>
+	  <listitem><simpara>a <classname>gobject.GPointer</classname> to the row 
+number of the cell to be activated</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>new_column</parameter>&nbsp;:</term>
+	  <listitem><simpara>a <classname>gobject.GPointer</classname> to the column 
+number of the cell to be activated</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>user_param1</parameter>&nbsp;:</term>
+          <listitem><simpara>the first user parameter (if any) specified
+with the <link
+linkend="method-gobject--connect"><methodname>connect</methodname>()</link>
+method</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><parameter>...</parameter>&nbsp;:</term>
+	  <listitem><simpara>additional user parameters (if
+any)</simpara></listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><emphasis>Returns</emphasis>&nbsp;:</term>
+	  <listitem><simpara><literal>True</literal> if the sheet should deactivate 
+      the (<parameter>row</parameter>, <parameter>column</parameter>) cell and 
+      activate the (<parameter>new_row</parameter>, <parameter>new_column</parameter>) 
+      cell.</simpara></listitem>
+	</varlistentry>
+      </variablelist>
+
+      <para>The "traverse" signal is emitted before the "deactivate-cell" is 
+emited and allows to veto the activation of the new cell (by returning <literal>False</literal> in 
+the callback).</para>
+
+      <para>The new_row and new_column paramerters are <classname>gobject.GPointer
+</classname> and thus cannot be used in a pygtk application.</para>
+
+    </refsect2>
+
 
 </refsect1>
 </refentry>

@@ -30,7 +30,7 @@
     <title>The PyGtkSheet Class Reference</title>
 
     <!-- GTKSHEET OBJECTS -->
-
+    <xi:include href="gtksheet-gtkitementry.xml"/>
     <xi:include href="gtksheet-gtksheet.xml"/>
     <xi:include href="gtksheet-gtksheetcellattr.xml"/>
     <xi:include href="gtksheet-gtksheetcellborder.xml"/>
