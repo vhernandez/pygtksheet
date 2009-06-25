@@ -1,0 +1,52 @@
+2009-06-21  Víctor M. Hernández <victor.hr@gmail.com>
+
+  * Makefile.am, examples/move_range_test.py: Add new example showing how to
+  move cell contents around
+
+  * docs/Makefile.am, docs/gtksheet-classes.xml,
+  docs/gtksheet-gtkitementry.xml, docs/gtksheet-gtksheet.xml: Finish Sheet
+  docs, add ItemEntry docs
+
+  * gtksheet/gtksheet.override: Fix ItemEntry.set_text(), justification
+  argument now optional
+
+  * docs/Makefile.am, docs/gtksheet-classes.xml, docs/gtksheet-gtksheet.xml,
+  docs/gtksheet-gtksheetcellattr.xml, docs/gtksheet-gtksheetcellborder.xml,
+  docs/gtksheet-gtksheetchild.xml, docs/gtksheet-gtksheetrange.xml: All methods
+  documented, dcos for SheetCellAttr, SheetCellBorder, SheetChild
+
+  * docs/gtksheet-gtksheet.xml: Document more gtksheet methods
+
+2009-06-19  Víctor M. Hernández <victor.hr@gmail.com>
+
+  * .gitignore, INSTALL, depcomp, install-sh, ltmain.sh, missing, py-compile:
+  Ignore more autotools generated  files
+
+  * .gitignore, Makefile.in, config.guess, config.sub, gtksheet/.gitignore,
+  gtksheet/Makefile.in, python-gtksheet.spec: ignore autotools generated files
+
+  * docs/gtksheet-gtksheet.xml: More gtksheet.Sheet documentation
+
+  * docs/Makefile.am, docs/gtksheet-classes.xml,
+  docs/gtksheet-gtksheetrange.xml: Document gtksheet.SheetRange
+
+  * gtksheet/gtksheet.defs: Fix optional parameters in range_clear and
+  range_delete methods
+
+2009-06-18  Víctor M. Hernández <victor.hr@gmail.com>
+
+  * docs/.gitignore, docs/gtksheet-classes.xml, docs/gtksheet-gtksheet.xml:
+  Documentation updates
+
+  * Makefile.am, Makefile.in, configure, configure.ac, docs/.gitignore,
+  docs/Makefile.am, docs/entities.docbook, docs/entities.docbook.in,
+  docs/gtksheet-classes.xml, docs/gtksheet-gtksheet.xml, gtksheet/Makefile.in:
+  Initial documentation draft
+
+  * gtksheet/gtksheet.override: Fix unused variable
+
+  * gtksheet/gtksheet.override: Fix get_visible_range() method
+
+2009-06-15  Víctor M. Hernández <victor.hr@gmail.com>
+
+  * libtool, python-gtksheet.spec, python-gtksheet.spec.in: Updated spec file

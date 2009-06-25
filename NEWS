@@ -1,3 +1,9 @@
+pygtksheet 0.2 (June, 25th 2009)
+==============
+* Included complete API documentation (build it with ./configure --enable-docs)
+* Update wrappers for ItemEntry.set_text, Sheet.range_clear, Sheet.range_delete
+  and Sheet.get_visible_range methods
+* Add new example showing how to move cell contents around
 
 pygtksheet 0.1 (June, 12th 2009)
 ==============

@@ -3,7 +3,7 @@ AC_PREREQ(2.63)
 
 dnl the python-gtkextra version number
 m4_define(python_gtksheet_major_version, 0)
-m4_define(python_gtksheet_minor_version, 1)
+m4_define(python_gtksheet_minor_version, 2)
 m4_define(python_gtksheet_micro_version, 0)
 m4_define(python_gtksheet_version, python_gtksheet_major_version.python_gtksheet_minor_version.python_gtksheet_micro_version)
 
@@ -12,7 +12,7 @@ m4_define(gtk_required_version,      2.10.0)
 m4_define(pygtk_required_version,    2.8.0)
 m4_define(gtksheet_required_version,    0.1.0)
 
-AC_INIT([python-gtksheet],[python_gtksheet_version],[http://sourceforge.net/tracker/?group_id=35371])
+AC_INIT([python-gtksheet],[python_gtksheet_version],[http://github.com/vhernandez/pygtksheet])
 AC_SUBST(ACLOCAL_AMFLAGS, "-I m4 -I .")
 AC_CONFIG_MACRO_DIR ("m4")
 AC_DEFINE(PYTHON_GTKSHEET_MAJOR_VERSION, python_gtksheet_major_version, [Python GtkSheet major version])
