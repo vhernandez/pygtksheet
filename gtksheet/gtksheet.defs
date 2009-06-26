@@ -34,6 +34,12 @@
   )
 )
 
+(define-method get_justification
+  (of-object "GtkItemEntry")
+  (c-name "gtk_item_entry_get_justification")
+  (return-type "GtkJustification")
+)
+
 (define-method set_justification
   (of-object "GtkItemEntry")
   (c-name "gtk_item_entry_set_justification")
