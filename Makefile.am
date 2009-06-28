@@ -19,7 +19,8 @@ EXTRA_DIST += \
   examples/complex_test.py \
   examples/fontcombo.py \
   examples/move_range_test.py \
-  examples/simple_test.py 
+  examples/simple_test.py \
+  examples/testgtksheet.py 
 
 snap:
 	$(MAKE) dist distdir=$(PACKAGE)-SNAP-`date +"%Y%m%d"`
