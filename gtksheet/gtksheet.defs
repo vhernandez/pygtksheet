@@ -898,6 +898,15 @@
   )
 )
 
+(define-method get_column_width
+  (of-object "GtkSheet")
+  (c-name "gtk_sheet_get_column_width")
+  (return-type "guint")
+  (parameters
+    '("gint" "column")
+  )
+)
+
 (define-method set_column_width
   (of-object "GtkSheet")
   (c-name "gtk_sheet_set_column_width")
@@ -905,6 +914,15 @@
   (parameters
     '("gint" "column")
     '("guint" "width")
+  )
+)
+
+(define-method get_row_height
+  (of-object "GtkSheet")
+  (c-name "gtk_sheet_get_row_height")
+  (return-type "guint")
+  (parameters
+    '("gint" "row")
   )
 )
 

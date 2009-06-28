@@ -466,9 +466,19 @@
   </methodsynopsis>
 
   <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-column-width">get_column_width</link></methodname>
+	  <methodparam><parameter role="keyword">column</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
 	  <methodname><link linkend="method-gtksheet--set-column-width">set_column_width</link></methodname>
 	  <methodparam><parameter role="keyword">column</parameter></methodparam>
 	  <methodparam><parameter role="keyword">width</parameter></methodparam>
+  </methodsynopsis>
+
+  <methodsynopsis language="python">
+	  <methodname><link linkend="method-gtksheet--get-row-height">get_row_height</link></methodname>
+	  <methodparam><parameter role="keyword">row</parameter></methodparam>
   </methodsynopsis>
 
   <methodsynopsis language="python">
@@ -715,7 +725,7 @@
 	    </row>
 
 	    <row valign="top">
-	      <entry>"gird-visible"</entry>
+	      <entry>"grid-visible"</entry>
 	      <entry>Read-Write</entry>
 	      <entry>If <literal>True</literal>, the grid lines will be visible</entry>
 	    </row>
@@ -3119,6 +3129,30 @@ Note that if the browser parameter is <literal>True</literal>, the entry_type ar
     </para>
   </refsect2>
 
+  <refsect2 id="method-gtksheet--get-column-width">
+    <title>gtksheet.Sheet.get_column_width</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_column_width</methodname>
+  	    <methodparam><parameter role="keyword">column</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a column number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>the width of the column, in pixels</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>get_column_width</methodname>() method returns the width of
+    the column indicated by <parameter>column</parameter>.
+    </para>
+  </refsect2>
+
   <refsect2 id="method-gtksheet--set-column-width">
     <title>gtksheet.Sheet.set_column_width</title>
     <programlisting><methodsynopsis language="python">
@@ -3130,7 +3164,7 @@ Note that if the browser parameter is <literal>True</literal>, the entry_type ar
     <variablelist>
 	    <varlistentry>
   	      <term><parameter role="keyword">column</parameter>&nbsp;:</term>
-    	  <listitem><simpara>a row number</simpara></listitem>
+    	  <listitem><simpara>a column number</simpara></listitem>
 	    </varlistentry>
 	    <varlistentry>
   	      <term><parameter role="keyword">width</parameter>&nbsp;:</term>
@@ -3142,6 +3176,30 @@ Note that if the browser parameter is <literal>True</literal>, the entry_type ar
     The <methodname>set_column_width</methodname>() method changes the width of
     the column indicated by <parameter>column</parameter> to the value of 
     <parameter>width</parameter>.
+    </para>
+  </refsect2>
+
+  <refsect2 id="method-gtksheet--get-row-height">
+    <title>gtksheet.Sheet.get_row_height</title>
+    <programlisting><methodsynopsis language="python">
+	    <methodname>get_row_height</methodname>
+  	    <methodparam><parameter role="keyword">row</parameter></methodparam>
+	    </methodsynopsis></programlisting>
+      
+    <variablelist>
+	    <varlistentry>
+  	      <term><parameter role="keyword">row</parameter>&nbsp;:</term>
+    	  <listitem><simpara>a row number</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+          <term><emphasis>Returns</emphasis>&nbsp;:</term>
+    	  <listitem><simpara>the new height of the column, in pixels</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+    The <methodname>get_row_height</methodname>() method returns the height of
+    the row indicated by <parameter>row</parameter>.
     </para>
   </refsect2>
 
