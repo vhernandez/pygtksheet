@@ -51,12 +51,14 @@ REFERENCE_DEPS =    \
 	$(XMLFILES)	    \
 	$(XSLFILES)
 
-$(HTML_DATA): build_stamp
 
-if ENABLE_DOCS
+
+$(HTML_DATA): build_stamp
 
 builddate.xml: $(REFERENCE_DEPS)
 	$(PYTHON) -c 'import datetime; print datetime.date.today()' > $@
+
+if ENABLE_DOCS
 
 build_stamp: $(REFERENCE_DEPS) builddate.xml
 	xsltproc --nonet --xinclude -o $(BUILDDIR)/html/ \
@@ -66,6 +68,10 @@ build_stamp: $(REFERENCE_DEPS) builddate.xml
                  $(HTML_STYLE) $(srcdir)/gtksheet-classes.xml
 	$(PYGOBJECT_FIXXREF) -i $(PYGOBJECT_PYGDOCS) $(BUILDDIR)/html/
 	touch $@
+else 
+
+build_stamp: 
+	touch $@
 
 endif
 
@@ -74,4 +80,5 @@ dist-hook: dist-hook-local build_stamp
 	mkdir $(distdir)/html
 	cp $(srcdir)/html/* $(distdir)/html
 	cp $(srcdir)/build_stamp $(distdir)
+
 
