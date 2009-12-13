@@ -1077,6 +1077,17 @@ and bottom cell borders, in pixels</entry>
           </methodsynopsis>
         </listitem>
       </varlistentry>
+      <varlistentry>
+        <term>"<link linkend="signal-gtksheet--unselect-range">unselect-range</link>"</term>
+        <listitem>
+          <methodsynopsis language="python"><methodname>callback</methodname>
+            <methodparam><parameter>sheet</parameter></methodparam>
+            <methodparam><parameter>range</parameter></methodparam>
+            <methodparam><parameter>data</parameter></methodparam>
+            <methodparam><parameter>...</parameter></methodparam>
+          </methodsynopsis>
+        </listitem>
+      </varlistentry>
    </variablelist>
 </refsect1>
 
@@ -4710,6 +4721,43 @@ the callback).</para>
 </classname> and thus cannot be used in a pygtk application.</para>
 
     </refsect2>
+
+  <refsect2 id="signal-gtksheet--unselect-range">
+    <title>The "unselect-range" gtksheet.Sheet Signal</title>
+    <programlisting><methodsynopsis language="python">
+	  <methodname>callback</methodname>
+	  <methodparam><parameter>sheet</parameter></methodparam>
+	  <methodparam><parameter>range</parameter></methodparam>
+	  <methodparam><parameter>data</parameter></methodparam>
+	  <methodparam><parameter>...</parameter></methodparam>
+	  </methodsynopsis></programlisting>
+
+    <variablelist>
+	    <varlistentry>
+	      <term><parameter>sheet</parameter>&nbsp;:</term>
+	      <listitem><simpara>the sheet that received the signal</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>range</parameter>&nbsp;:</term>
+	      <listitem><simpara>the <link linkend="class-gtksheetrange">
+          <classname>gtksheet.SheetRange</classname></link> of unselected cells
+          </simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>data</parameter>&nbsp;:</term>
+          <listitem><simpara>additional data (if any) specified with the 
+          <link linkend="method-gobject--connect"><methodname>connect</methodname>()</link> method</simpara></listitem>
+	    </varlistentry>
+	    <varlistentry>
+	      <term><parameter>...</parameter>&nbsp;:</term>
+	      <listitem><simpara>additional user parameters (if any)</simpara></listitem>
+	    </varlistentry>
+    </variablelist>
+
+    <para>
+      The "unselect-range" signal is emitted when a block of cells has been unselected.
+    </para>
+  </refsect2>
 
 
 </refsect1>
