@@ -1,4 +1,30 @@
+General Information
+===================
+
 This package provides a Python interface to the GtkSheet widget set for GTK2.
 Its home on the web is <http://github.com/vhernandez/pygtksheet>.
 
 Victor M. Hernández-Rocamora <victor.hr@gmail.com>.
+
+Installation
+============
+
+In the root directory of the distribution run the following commands in the
+shell command line:
+
+    ./configure
+    make
+    make install
+
+See the file 'INSTALL' for a detailed explanation.
+
+Documentation
+=============
+
+This package includes full library API documentation located in /docs. To 
+generate documentation include the '--enable-docs' option when invoking
+./configure script.
+
+Also look at the examples included in the /examples directory.
+
+
