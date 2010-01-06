@@ -32,7 +32,6 @@ gtksheet.c: $(COMMONDEFS) gtksheet-addons.defs gtksheet-types.defs gtksheet.over
 nodist__gtksheetmodule_la_SOURCES = gtksheet.c
 
 CLEANFILES += gtksheet.c
-defs_DATA += gtksheet.defs gtksheet-types.defs gtksheet-addons.defs
 EXTRA_DIST += gtksheet.override \
 	gtksheetrange.override
 
